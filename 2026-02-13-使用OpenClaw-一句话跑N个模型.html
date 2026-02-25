@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026-02-13-使用OpenClaw 一句话跑N个模型</title>
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background: #f5f5f5;
+}
+.container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.article {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.header {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+.meta {
+    font-size: 13px;
+    color: #888;
+}
+.meta a {
+    color: #0066cc;
+    text-decoration: none;
+}
+.content {
+    font-size: 16px;
+    line-height: 1.9;
+}
+.content p {
+    margin-bottom: 16px;
+    text-align: justify;
+}
+.content h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 28px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #0066cc;
+}
+.content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 20px 0 12px;
+}
+.content strong {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+.content a {
+    color: #0066cc;
+    text-decoration: none;
+}
+.content ol {
+    margin: 16px 0;
+    padding-left: 24px;
+}
+.content li {
+    margin-bottom: 12px;
+}
+.image-wrapper {
+    margin: 20px 0;
+    text-align: center;
+}
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #0066cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 24px;
+    font-weight: 500;
+}
+.back-link:hover {
+    background: #0052a3;
+}
+@media (max-width: 480px) {
+    .container { padding: 12px; }
+    .article { padding: 16px; border-radius: 12px; }
+    .title { font-size: 20px; }
+    .content { font-size: 15px; }
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <article class="article">
+            <header class="header">
+                <h1 class="title">2026-02-13-使用OpenClaw 一句话跑N个模型</h1>
+                <div class="meta">
+                    📅 2026-02-13 · 
+                    <a href="https://x.com" target="_blank">查看原文 →</a>
+                </div>
+            </header>
+            <div class="content">
+                <p>如何使用OpenClaw 一句话跑N个模型，实现模型任选及上下文追踪</p>
+<p>> 昨天有推友问不同的subagent能否使用不同的模型？答案是肯定的</p>
+<p>> 本文将演示如何OpenClaw 一句话实现 Opus 4.6 VS Opus 4.5 VS GLM-5 的对比测评，并用gpt-5.2锐评。使用banana pro 生成图片，并使用一个tts 模型生成一段音频，全程只需要几句话（其实一句话也可以）就可以完成</p>
+<p>> 并通过ZenMux日志追踪OpenClaw tokens消耗，通过简单的调整实现输入tokens 降低2/3</p>
+<p># 一、模型任选演示</p>
+<p>使用的是Opus 4.6 VS Opus 4.5 VS GLM-5，让gpt-5.2-pro锐评，请看截图过程</p>
+<p>> 提示词：spawn 2个subagent，分别使用zenmux 的Opus 4.6  、  Opus 4.5 实现：藏头诗：《静夜思》每字藏头，每句结尾三押 然后把内容完整给spawn新的subagent，使用分别使用zenmux 的gpt-5.2-pro锐评和评分，形成报告： 藏头诗对比：Opus 4.6 vs Opus 4.5</p>
+<p>第一轮结果（一开始岚叔没有加glm-5,以为模型刚出，以为ZenMux没这么快，结果是我大意了）：</p>
+<p>然后就在龙虾的平行分身（topic）里让它把glm-5添加上：</p>
+<p>再加试一轮：</p>
+<p>最终结果：</p>
+<p>gpt-5.2-pro 评语：</p>
+<p>```
+🎙️ 评委无情锐评</p>
+<p>• 🏆 Opus 4.6（“会格律的傲娇诗人”）：  • 优点：全场唯一有稳定押韵自觉的选手，意境清冷。
+  • 毒舌：别老想着用“银河落九方”去升级李白，那是用力过猛。逻辑上“明知”却又问“何方”，自相矛盾。</p>
+<p>• 🥈 GLM-5（“穿唐装的留学生”）：  • 优点：藏头熟练，情绪饱满。
+  • 毒舌：你前面还关山万重，后面突然来一句“归心似箭渡重洋”？这是唐代还是 21 世纪？问号太多，把诗的气韵都戳碎了。</p>
+<p>• 🥉 Opus 4.5（“古风素材仓库”）：  • 优点：写得确实多（20句）。
+  • 毒舌：把《静夜思》写成了“长夜失眠连续剧”，意象堆得互相踩踏。押韵基本是“散点图”，完全是在自我感动。
+```</p>
+<p>三个模型作品内容：</p>
+<p>```
+| 藏头 | Opus 4.5 (58分)   | Opus 4.6 (84分) | GLM-5 (63分)      |
+| --- | ---------------- | -------------- | ---------------- |
+| 床  | 床边独坐听风响，夜凉如水透纱窗。 | 床畔清寒夜未央        | 床帷深处夜未央，孤灯独照影凄凉。 |
+| 前  | 前尘往事随烟往，梦里依稀见故乡。 | 前溪流水映星芒        | 前尘往事梦一场，几番离愁几断肠。 |
+| 明  | 明灯如豆摇清影，照我孤怀意彷徨。 | 明灭孤灯影彷徨        | 明月清辉洒四方，天涯游子忆沧桑。 |
+| 月  | 月洒银辉铺石径，清光万里共苍茫。 | 月落乌啼霜满廊        | 月下徘徊思故乡，故园遥望泪沾裳。 |
+| 光  | 光阴似箭催人老，白发萧萧染鬓霜。 | 光阴流转入华堂        | 光阴似水流年长，青丝渐染鬓如霜。 |
+| 疑  | 疑是故园桂花放，暗香浮动入回廊。 | 疑是银河落九方        | 疑云迷雾锁心房，何时归去慰高堂？ |
+| 是  | 是夜无眠思绪长，辗转反侧到天亮。 | 是非难辨梦黄粱        | 是非红尘皆过往，唯有相思意难忘。 |
+| 地  | 地冷霜重秋意凉，寒蛩切切诉悲伤。 | 地角天涯共渺茫        | 地北天南路茫茫，关山万重梦难偿。 |
+| 上  | 上有明月照四方，下有游子断肝肠。 | 上穷碧落下苍黄        | 上下求索意彷徨，此情无处可安放。 |
+| 霜  | 霜染枫林红欲燃，一片赤诚寄远方。 | 霜重露浓秋草荒        | 霜风萧瑟透轩窗，孤怀难遣自悲伤。 |
+| 举  | 举目遥望云天阔，雁字横斜入苍茫。 | 举目遥看雁几行        | 举杯独饮诉衷肠，遥寄相思明月光。 |
+| 头  | 头枕清风思无尽，魂牵梦绕是吾乡。 | 头顶星辰夜未央        | 头白归来鬓染霜，故人何处在何方？ |
+| 望  | 望穿秋水盼归期，何日重逢话衷肠。 | 望极天涯肠断伤        | 望断天涯路漫长，归心似箭渡重洋。 |
+| 明  | 明月年年照旧处，可怜游子在他乡。 | 明知故渡在何方        | 明眸遥望夜色凉，故园千里梦徜徉。 |
+| 月  | 月圆人缺情难忘，此心此意共天长。 | 月照离人泪两行        | 月华如水照轩窗，思君不见空惆怅。 |
+| 低  | 低吟浅唱诉离殇，泪眼婆娑湿衣裳。 | 低回宛转诉衷肠        | 低眉凝思意难量，一腔愁绪何处藏？ |
+| 头  | 头白归来应识我，乡音未改鬓如霜。 | 头枕寒流梦一场        | 头倚孤枕夜漫长，满怀心事诉风霜。 |
+| 思  | 思亲念旧情难忘，纸短情长寄远方。 | 思量往事已苍茫        | 思君念君泪沾裳，此生谁共度沧桑？ |
+| 故  | 故国山河入梦乡，青山绿水共徜徉。 | 故国三千路正长        | 故园千里隔山岗，归期何日话衷肠？ |
+| 乡  | 乡愁如酒醉心房，一曲离歌泪满裳。 | 乡心一寸永难忘        | 乡关何处是归航，漂泊半生梦一场。 |</p>
+<p>```</p>
+<p>再让用zenmux 的生图skill使用banana pro生成图片：</p>
+<p>可以看到 Opus 4.5都被埋了😂</p>
+<p>然后再让生成一段TTS：</p>
+<p>OK，收工，可以看到我们用OpenCLaw就完成了整个测评、生图、生音频的内容。</p>
+<p>那么如何让你的OpenClaw 快速接入并像岚叔这样随意拨弄模型呢？</p>
+<p>推荐岚叔最近基于keng哥扩充的插件，里面已经集成了zenmux 提供的主流模型</p>
+<p>你只需要把<a href="http://readme.md/" target="_blank">README.md</a> 丢给你的龙虾让它安装插件，然后你用openclaw config 配置一下就可以了</p>
+<p>开源代码地址见：<a href="https://github.com/cclank/openclaw_provider_plugins" target="_blank">https://github.com/cclank/openclaw_provider_plugins</a></p>
+<p>另外岚叔也把zenmux 的nano banana pro 做成了skill，方便你在不切换模型的时候一句话就能生成图片。所有的一切都只需要一个zenmux账号，方便管理。</p>
+<p>github里也包括z-image、tts 相关skill欢迎试用～</p>
+<p># 二、上下文追踪</p>
+<p>那么怎么怎么我们上面说的就是那些模型呢？看图👇</p>
+<p>这个就是zenmux一个很棒的功能，就是日志功能，可以清楚的看到OpenClaw 请求过来的system prompt 以及user prompt 这对于我们调试龙虾还是很方便的</p>
+<p>可以看到，所有日志都有明细</p>
+<p>而且，岚叔早上调试了一下OpenClaw 的提示词，发现效果明显，做测评的时候，输入token直降1/3，秘诀就在下图，但还未完全测试正式，你也可以使用同样的方式在你的AGENTS.md 里试试、欢迎反馈结果：</p>
+<p>反正改完以后再spawn 输入tokens 降了不少</p>
+<p>有了这个相当于我们有了一个可视化的调优界面</p>
+<p>日志里我们也可以看到user prompt的输入，完美～</p>
+<p>最后再推荐下ZenMux:  <a href="https://zenmux.ai/invite/REDTOM" target="_blank">https://zenmux.ai/invite/REDTOM</a></p>
+<p>他家模型上新巨快、而且可以不科学上网就能使用openai、Claude、Gemini等顶级模型</p>
+<p>对OpenClaw使用非常友好，模型切换方便，debug上下文查看也方便</p>
+<h2>图片 (11张)</h2>
+<ol>
+<li>https://pbs.twimg.com/media/HA7_DRzbsAMFx7L.jpg</li>
+<li>https://pbs.twimg.com/media/HA7_-6obsAIZJ6j.jpg</li>
+<li>https://pbs.twimg.com/media/HA7-BEQbYAAhwlZ.jpg</li>
+<li>https://pbs.twimg.com/media/HA7-jZ8b0AAjI6_.jpg</li>
+<li>https://pbs.twimg.com/media/HA7_NSibsAAqq_g.jpg</li>
+<li>https://pbs.twimg.com/media/HA7-oPRawAAGjNT.jpg</li>
+<li>https://pbs.twimg.com/media/HA7-_b0bIAAfDY_.jpg</li>
+<li>https://pbs.twimg.com/media/HA7-Yt8boAAsvhi.jpg</li>
+<li>https://pbs.twimg.com/media/HA7_1cibsAMbOF9.jpg</li>
+<li>https://pbs.twimg.com/media/HA7_upUa0AAlOnN.jpg</li>
+<li>https://pbs.twimg.com/media/HA7-fRUboAA_hGM.jpg</li>
+</ol>
+---
+            </div>
+            <a href="/" class="back-link">← 返回文章列表</a>
+        </article>
+    </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleMem：面向AI Agent的高效终身记忆框架</title>
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background: #f5f5f5;
+}
+.container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.article {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.header {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+.meta {
+    font-size: 13px;
+    color: #888;
+}
+.meta a {
+    color: #0066cc;
+    text-decoration: none;
+}
+.content {
+    font-size: 16px;
+    line-height: 1.9;
+}
+.content p {
+    margin-bottom: 16px;
+    text-align: justify;
+}
+.content h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 28px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #0066cc;
+}
+.content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 20px 0 12px;
+}
+.content strong {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+.content a {
+    color: #0066cc;
+    text-decoration: none;
+}
+.content ol {
+    margin: 16px 0;
+    padding-left: 24px;
+}
+.content li {
+    margin-bottom: 12px;
+}
+.image-wrapper {
+    margin: 20px 0;
+    text-align: center;
+}
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #0066cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 24px;
+    font-weight: 500;
+}
+.back-link:hover {
+    background: #0052a3;
+}
+@media (max-width: 480px) {
+    .container { padding: 12px; }
+    .article { padding: 16px; border-radius: 12px; }
+    .title { font-size: 20px; }
+    .content { font-size: 15px; }
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <article class="article">
+            <header class="header">
+                <h1 class="title">SimpleMem：面向AI Agent的高效终身记忆框架</h1>
+                <div class="meta">
+                    📅 2026-02-13 · 
+                    <a href="https://x.com/shao__meng/status/2021746506341163412" target="_blank">查看原文 →</a>
+                </div>
+            </header>
+            <div class="content">
+                <p>SimpleMem: 面向 AI Agent 的高效终身记忆框架</p>
+<p>SimpleMem 的技术路线与 Mem0、A-Mem 等"被动累积型"或"迭代推理型"记忆系统有本质区别。它通过语义无损压缩最大化信息密度，让 AI Agent 在保持高检索精度的同时，大幅降低 token 开销和延迟，F1 精度上领先 Mem0 约 26%，同时端到端速度是 A-Mem 的 12.5 倍。同时提供 PyPI 安装（pip install simplemem）和 MCP 云服务。</p>
+<div class="image-wrapper"><a href="https://x.com/shao__meng/status/2021746506341163412" target="_blank"><img src="https://pbs.twimg.com/media/HA4ksJMWIAAM_3U.jpg?format=jpg&name=small" alt="Image" loading="lazy"/></a></div>
+<p>-- 核心架构：三阶段流水线 --</p>
+<p>Stage 1：语义结构化压缩
+<ol>
+<li>滑动窗口分段 — 对话流按固定窗口大小（默认 40 轮）切分，保留少量重叠（默认 2 轮）以维持上下文连续性。</li>
+<li>隐式语义密度门控 — 论文中记作 Φ_gate(W) → {m_k}。实际实现上，通过精心设计的 prompt 让 LLM 同时完成两件事：过滤低信息密度的对话片段，并将剩余内容转化为紧凑的原子记忆单元。</li>
+<li>共指消解与时间绝对化 — prompt 中明确要求"绝对禁止使用代词和相对时间"，所有输出必须是自包含、无歧义的完整语句。</li>
+<li>三视图索引 — 每个记忆单元同时构建三层索引，对应 models/memory_entry.py 中的 MemoryEntry 数据模型。</li>
+</ol>
+具体实现：VectorStore 使用 LanceDB 作为底层列式存储，同时支持本地和云存储（GCS/S3/Azure）。向量嵌入默认使用 Qwen3-Embedding-0.6B（1024 维），通过 SentenceTransformers 接口调用，支持 query/document 不对称编码。</p>
+<p>Stage 2：在线语义合成
+这是 SimpleMem 相比同类系统的一个关键差异化设计。合成发生在写入阶段，而非后台异步维护。
+实现上，合成逻辑融入了 Stage 1 的 prompt 设计中：通过要求 LLM "生成足够多的记忆条目以确保所有信息被捕获"，同时提供前一个窗口的记忆条目作为参考上下文，LLM 在生成时自然完成了信息的去重和合并。</p>
+<p>并行处理：对于大规模对话数据，MemoryBuilder 使用 ThreadPoolExecutor 将多个窗口并行发送给 LLM 处理，默认最多 16 个并行 worker。</p>
+<p>Stage 3：意图感知检索规划
+与传统 RAG 的区别：传统系统对每个查询执行固定深度的检索；SimpleMem 则让 LLM 先分析查询意图，动态决定检索策略。
+完整的检索流程：
+<ol>
+<li>信息需求分析 — LLM 判断问题类型（事实型/时间型/关系型等），识别关键实体，确定所需信息的最小集合。</li>
+<li>生成靶向查询 — 根据分析结果，生成 1-4 条针对性查询（而非直接使用原始问题），避免冗余检索。</li>
+<li>并行多视图检索 — 同时在三层索引上执行搜索：</li>
+</ol>
+  · 语义搜索：R_sem = Top-25(cos(E(q_sem), E(m_i)))
+  · 关键词搜索：R_lex = Top-5(BM25(q_lex, m_i))
+  · 结构化搜索：R_sym = Top-5({m_i | Meta(m_i) ⊨ q_sym})
+<ol>
+<li>结果合并去重 — 按 entry_id 去重：C_q = R_sem ∪ R_lex ∪ R_sym</li>
+<li>智能反思机制 — 可选的 1-2 轮反思循环：</li>
+</ol>
+  · LLM 评估当前检索结果是否足以回答问题
+  · 若不足，分析缺失的信息类型，生成补充查询
+  · 再次检索并合并结果</p>
+<p>这种设计使得简单问题只需一次浅层检索，复杂问题自适应地扩展检索深度。</p>
+<p>开源地址：https://github.com/huaxiuyao/SimpleMem</p>
+            </div>
+            <a href="/" class="back-link">← 返回文章列表</a>
+        </article>
+    </div>
+</body>
+</html>

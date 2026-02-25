@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memsearch开源：让你的Agent拥有OpenClaw同款记忆力</title>
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background: #f5f5f5;
+}
+.container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.article {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.header {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+.meta {
+    font-size: 13px;
+    color: #888;
+}
+.meta a {
+    color: #0066cc;
+    text-decoration: none;
+}
+.content {
+    font-size: 16px;
+    line-height: 1.9;
+}
+.content p {
+    margin-bottom: 16px;
+    text-align: justify;
+}
+.content h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 28px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #0066cc;
+}
+.content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 20px 0 12px;
+}
+.content strong {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+.content a {
+    color: #0066cc;
+    text-decoration: none;
+}
+.content ol {
+    margin: 16px 0;
+    padding-left: 24px;
+}
+.content li {
+    margin-bottom: 12px;
+}
+.image-wrapper {
+    margin: 20px 0;
+    text-align: center;
+}
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #0066cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 24px;
+    font-weight: 500;
+}
+.back-link:hover {
+    background: #0052a3;
+}
+@media (max-width: 480px) {
+    .container { padding: 12px; }
+    .article { padding: 16px; border-radius: 12px; }
+    .title { font-size: 20px; }
+    .content { font-size: 15px; }
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <article class="article">
+            <header class="header">
+                <h1 class="title">memsearch开源：让你的Agent拥有OpenClaw同款记忆力</h1>
+                <div class="meta">
+                    📅 2026-02-13 · 
+                    <a href="https://x.com/yinmin1987/status/2021835061801496604" target="_blank">查看原文 →</a>
+                </div>
+            </header>
+            <div class="content">
+                <p>刚刚开源：memsearch —— 让你的 Agent 拥有 OpenClaw 同款记忆力。</p>
+<p>最近OpenClaw全球刷屏，GitHub 187K+ stars的成绩背后，很多人都盯着它的多平台对话能力。</p>
+<p>但在我们看来，它能够够跨平台、跨会话的长期AI记忆系统的设计，也同样可圈可点。</p>
+<p>在OpenClaw，AI会自动写 daily logs并以md格式存储，人类可以手动对其进行维护，并提炼长期原则，让AI记忆变得可控、透明且管理高效。</p>
+<p>而我们，也正是被这套记忆系统打动，做了一件事：把它的核心设计抽离出来，做成了独立Python库memsearch，让任何开发者都能给自家Agent加上持久、透明、可控的记忆，不用被OpenClaw的单一形态所限制。</p>
+<p>先上核心信息：</p>
+<p>📌 项目地址：https://github.com/zilliztech/memsearch（MIT开源，可直接商用）</p>
+<p>🎯 核心定位：OpenClaw记忆系统的平替、零门槛集成</p>
+<p>💡 核心优势：Markdown明文记忆（透明可控）、向量索引可重建、人机共创（AI记细节，人定原则）</p>
+<h2>一、先搞懂：OpenClaw的记忆系统，到底牛在哪？</h2>
+<p>要理解OpenClaw的记忆，首先得分清两个容易混淆的概念：上下文和记忆。</p>
+<p>先说说上下文，上下文主要包括四部分：静态+条件化的系统提示词、AGENTS.md和SOUL.md这类引导文件的项目上下文、过往的对话历史（包括消息、工具调用记录和压缩摘要），还有你当下发的消息。其实就是每次你给OpenClaw发请求时，agent能接收到的所有信息，整体内容会更精简。</p>
+<p>再来看看记忆，它是存在你本地磁盘里的持久化数据，是历史会话、历史文件、用户偏好等的总和，采用的是全量存储。</p>
+<p>具体的记忆构建细节，我们就不再本篇文章展开了。其中最值得一提的是，OpenClaw的所有记忆，都是以 Markdown 格式存储在本地文件中，除了智能体自动写入，你也可以直接手动编辑这些 md 文件，而向量数据库只是派生索引。而且只要md文件修改并保存，系统会自动对新内容重新建立索引，确保后续能被正常检索，不用额外执行操作。</p>
+<p>这种模式，相比Mem0、Zep等主流把向量数据库当成唯一记忆来源的形式，有三个优点：透明（MD格式，打开就知道AI记了什么）、可编辑（改完直接生效）、可移植（复制文件就能迁移），但问题也很突出：</p>
+<p>想用这套记忆系统，你必须运行整个OpenClaw生态：Gateway进程、消息平台连接、工作区配置……对于只想给自家Agent加个持久记忆的开发者来说，门槛太高了。</p>
+<p>这就是我们做memsearch的初衷：保留OpenClaw的核心记忆理念，去掉所有冗余，做成一个能插在任何Agent框架里的轻量化库。</p>
+<h2>二、memsearch核心思路：可编辑、插件化、高度透明</h2>
+<p>memsearch完全继承了OpenClaw的Markdown优先的理念，你的所有AI记忆，都以明文形式存在本地文件夹里，结构清晰到不用查文档就能看懂：</p>
+<p>```
+~/your-project/
+└── memory/
+    ├── MEMORY.md              # 手写的长期记忆
+    ├── 2026-02-09.md          # 今天的工作日志
+    ├── 2026-02-08.md
+    └── 2026-02-07.md
+```</p>
+<p>建立在此基础上，Milvus只是一个辅助工具，用来给Markdown内容建立索引，加快搜索速度。哪怕你删掉向量数据库文件，只要Markdown还在，重新索引5分钟就能恢复所有记忆。</p>
+<p>记忆存在 Markdown 文件里。打开就能看懂 AI 记住了什么，vim 改完自动重新索引，git clone 就能带走。向量数据库（Milvus）只是个可重建的索引，随时可以删掉重来。</p>
+<p>这样设计有几个好处。</p>
+<strong>好处 1：透明可读，调试容易</strong>
+<p>传统方案：即使AI 回答错了，你也不知道它记住了什么，为什么错。然后得写代码调 API 查数据库，但看到的全是向量和JSON，根本看不懂语义。</p>
+<p>memsearch方案：直接打开memory文件夹下的对应Markdown文件，就能看到AI的完整记忆：</p>
+<p>```markdown
+<h2>Morning</h2>
+- Fixed N+1 query issue — switched to selectinload()
+- Query count dropped from 152 to 3
+```</p>
+<p>如果 AI 说错话，可能是这段记忆过时了。vim 改一下，保存，系统自动重新索引。5 秒解决问题。</p>
+<strong>好处 2：版本控制，团队协作</strong>
+<p>传统方案：记忆存在数据库里，谁改了什么、什么时候改的，只能查审计日志（很多方案甚至没有），协作成本极高。</p>
+<p>memsearch方案：直接用Git管理Markdown文件，一行命令就能追溯所有修改记录：</p>
+<p>```bash
+git log memory/MEMORY.md
+git diff HEAD~1 memory/2026-02-09.md
+```</p>
+<p>```diff
++ ## Architecture Decision
++ - Use Kafka for event bus instead of RabbitMQ
++ - Reason: better horizontal scaling
+```</p>
+<strong>好处 3：迁移自由，不被锁定</strong>
+<p>传统方案：如果用了Mem0想换Zep或者其他记忆框架，就要导出数据、转换格式、重新导入，还可能出现字段不兼容，迁移一次要折腾大半天。</p>
+<p>memsearch方案：记忆是纯明文Markdown，迁移零成本，不用改一行代码。</p>
+<p>- 换电脑：用rsync复制memory文件夹，直接能用
+- 换embedding模型：重新执行索引命令，5分钟搞定，Markdown文件不动
+- 换向量数据库部署模式：只改一行配置，比如从本地切换到云端：</p>
+<p>比如你在用 Milvus Lite 开发，部署到生产时要换成 Zilliz Cloud：</p>
+<p>```python
+# 开发环境
+ms = MemSearch(milvus_uri="~/.memsearch/milvus.db")</p>
+<p># 生产环境（只改这一行）
+ms = MemSearch(milvus_uri="https://xxx.zillizcloud.com")
+```</p>
+<p>markdown 文件一个字都不用改。</p>
+<strong>好处 4：人机共创，各司其职</strong>
+<p>传统方案：AI 写记忆，人类要改，得懂 API 接口，写代码更新。</p>
+<p>memsearch方案：
+- AI负责：自动生成每日日志（YYYY-MM-DD.md），记录琐碎的执行细节（比如"部署了v2.3.1，性能提升12%"）
+- 人类负责：手动维护MEMORY.md，提炼长期有效的原则（比如"团队技术栈：Python+FastAPI+PostgreSQL"）</p>
+<p>你和AI，本质上是在共同编辑同一套Markdown文档——不用懂代码，打开文件就能修改、补充。这种协作模式，在数据库方案里根本无法实现。</p>
+<h2>三、架构拆解：四大流程，看懂memsearch怎么工作</h2>
+<p>memsearch的核心工作流程有4个：Watch（监听）→ Index（索引）→ Search（搜索）→ Compact（压缩），接下来，我们逐个讲解。</p>
+<strong>流程 1：Watch（监听文件变化）</strong>
+<p>这一流程主要用于监听memory文件夹下的所有Markdown文件，当你修改、保存文件后，系统会在1500ms后自动触发重新索引（去抖设计）。</p>
+<p>（1500ms是个实操后的经验值——太短（比如100ms）会导致打字时频繁触发索引，浪费embedding API调用；太长（比如10秒）会影响体验，1500ms刚好平衡响应速度和资源消耗。）</p>
+<p>启动watch进程后，你就可以一边写代码，一边手动修改MEMORY.md（比如添加API文档地址），保存后不用重启服务，下一次AI查询就能用到新记忆。</p>
+<strong>流程 2：Index（分块、去重、索引）</strong>
+<p>Index是memsearch的性能关键，主要做3件事：</p>
+<ol>
+<li><strong>分块（Chunking）</strong>：按标题（heading）和段落切分，比如一个##标题+它的内容为一个chunk，语义边界更清晰，避免把"Redis配置"之类的表述切成两半导致语义不完整。</li>
+</ol>
+比如这段 markdown：
+<p>```markdown
+<h2>Redis Caching</h2>
+We use Redis for L1 cache with 5min TTL.
+The connection pool is configured with max 100 connections.</p>
+<h2>Database</h2>
+PostgreSQL 16 is the primary database.
+```
+<p>会被切成 3 个 chunk：</p>
+<p>- Chunk 1: "## Redis Caching\nWe use Redis for L1 cache..."
+- Chunk 2: "## Database\nPostgreSQL 16 is the primary database."
+- Chunk 3 可能是下一段内容</p>
+<ol>
+<li><strong>去重（Dedup）</strong>：计算每个chunk的SHA-256哈希，重复内容只索引一次——比如两处都提到"PostgreSQL 16"，只调用一次embedding API，能省20%以上的成本（具体测算：500KB文本，去重后每月可省$0.15，大规模使用可省数百美元）。</li>
+</ol>
+<ol>
+<li><strong>Chunk ID设计</strong>：格式为「hash(source_path:start_line:end_line:content_hash:model_version)」。这里面包含所有关键信息，换embedding模型时，系统能自动识别过期索引，无需手动清理。</li>
+</ol>
+- source_path：哪个文件
+- start_line, end_line：文件的哪几行
+- content_hash：内容的哈希值（用于去重）
+- model_version：用的哪个 embedding 模型
+<p>包含 model_version 是因为你可能会换 embedding 模型（比如从 `text-embedding-3-small` 升级到 `text-embedding-3-large`）。旧的 embedding 就过期了，需要重新计算。包含 model_version 后，系统能自动识别哪些 chunk 需要重新 embed。</p>
+<strong>流程 3：Search（混合搜索）</strong>
+<p>这里我们采用向量搜索（70%权重）+ BM25关键词搜索（30%权重）的混合模式，兼顾语义相似和精确匹配（如果你的查询偏向精确匹配（查错误码、函数名），可以提高 BM25 权重到 50%。）。</p>
+<p>💡 几个关键细节：</p>
+<p>- <strong>向量搜索</strong>：负责语义匹配，比如查询"Redis缓存配置"，能匹配到"Redis L1 cache with 5min TTL"（用词不同但语义一致）；
+- <strong>BM25搜索</strong>：负责精确匹配，比如查询"PostgreSQL 16"，不会匹配到"PostgreSQL 15"，适合查错误码、函数名；
+- <strong>渐进式披露</strong>：搜索返回Top-K（默认3）个chunk摘要（截断200字），需要时调用「memsearch expand <chunk_hash>」查看完整内容，节省LLM上下文窗口。</p>
+<strong>流程 4：Compact（压缩旧记忆）</strong>
+<p>Agent运行久了，旧的记忆会占满上下文，增加成本也干扰大模型回答的准确率，Compact会调用LLM总结所有历史记忆，生成精简摘要，然后删除/归档原始文件。</p>
+<p>实操方法：可手动触发，也可配置定时自动执行。</p>
+<h2>四、实操指南</h2>
+<p>memsearch支持Python API和CLI工具两种方式，适配不同开发场景，使用的数据库方面，我们的选型建议如下：</p>
+<p>- <strong>Milvus Lite（默认）</strong>：本地 `.db` 文件，零配置，适合个人使用。
+- <strong>Milvus Server</strong>：自托管服务，支持多 Agent 共享数据，适合团队环境。
+- <strong>Zilliz Cloud</strong>：全托管，自动扩容、备份，适合生产环境。</p>
+<p>或者也可以开发时用 Lite，部署时换 Cloud，三种模式代码接口完全一致，改一个配置项就行。此外，我们支持多种embedding提供商（OpenAI、Google、Voyage、Ollama、本地模型）。</p>
+<strong>第一步：快速安装</strong>
+<p>```bash
+pip install memsearch
+```</p>
+<strong>第二步：两种使用方式</strong>
+<strong>方式1：Python API（集成到Agent框架）</strong>
+<p>一个完整的带记忆的Agent循环示例（可直接复制修改）：</p>
+<p>```python
+from openai import OpenAI
+from memsearch import MemSearch</p>
+<p>llm = OpenAI()
+ms = MemSearch(paths=["./memory/"])</p>
+<p>async def agent_chat(user_input: str) -> str:
+    # 1. Recall — 搜索相关记忆
+    memories = await ms.search(user_input, top_k=3)
+    context = "\n".join(f"- {m['content'][:200]}" for m in memories)</p>
+<p># 2. Think — 调用 LLM
+    resp = llm.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": f"Memories:\n{context}"},
+            {"role": "user", "content": user_input},
+        ],
+    )</p>
+<p># 3. Remember — 写入 markdown，更新索引
+    save_memory(f"## {user_input}\n{resp.choices[0].message.content}")
+    await ms.index()
+    return resp.choices[0].message.content
+```</p>
+<p>核心逻辑：Recall（搜索记忆）→ Think（LLM推理）→ Remember（写入记忆），闭环完整，可集成到任何Agent框架（LangChain、AutoGPT、自研框架等）。</p>
+<strong>方式2：CLI工具（快速操作，适合调试）</strong>
+<p>```bash
+memsearch index ./docs/              # 索引文件
+memsearch search "Redis caching"     # 搜索
+memsearch watch ./docs/              # 监听文件变化
+memsearch compact                    # 压缩旧记忆
+```</p>
+<h2>四、和其他方案对比：我们到底不一样在哪？</h2>
+<p>很多开发者会问：市面上已有Mem0、Zep等记忆方案，为什么还要用memsearch？</p>
+<p>这里我们总结了选型一张表，供大家参考。</p>
+<p>| 特性 | memsearch | Mem0 | Zep |
+|------|-----------|------|-----|
+| 存储格式 | Markdown明文 | 数据库 | 数据库 |
+| 透明可控 | ✅ 打开文件即见 | ❌ 需调API查询 | ❌ 需调API查询 |
+| 版本控制 | ✅ Git原生支持 | ❌ 需额外审计 | ❌ 需额外审计 |
+| 迁移成本 | ✅ 零成本（rsync） | ❌ 导出导入 | ❌ 导出导入 |
+| 人机共创 | ✅ 共同编辑Markdown | ❌ 需API操作 | ❌ 需API操作 |
+| 索引可重建 | ✅ 随时删掉重来 | ❌ 主存储 | ❌ 主存储 |
+| 混合搜索 | ✅ 向量+BM25 | 向量 | 向量 |</p>
+<p>memsearch 是开源的，MIT 协议。</p>
+<p>项目地址：https://github.com/zilliztech/memsearch</p>
+<p>文档页面：https://zilliztech.github.io/memsearch/</p>
+<p>欢迎试用、反馈、贡献代码。如果你认同"Markdown 作为真理来源"的理念，如果你也觉得 AI 记忆应该透明可控，期待你的参与。</p>
+<strong>OpenClaw 的记忆系统，现在人人都能用了。</strong>
+            </div>
+            <a href="/" class="back-link">← 返回文章列表</a>
+        </article>
+    </div>
+</body>
+</html>
