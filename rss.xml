@@ -8,13 +8,600 @@
 <link>https://paulwebster068-cyber.github.io/xmd-rss/</link>
 <description>每日自动抓取的X收藏文章，AI翻译整理，聚焦科技、AI、投资领域。包含完整全文、图片、三点式摘要。</description>
 <language>zh-CN</language>
-<lastBuildDate>Thu, 26 Feb 2026 13:09:08 +0800</lastBuildDate>
+<lastBuildDate>Thu, 26 Feb 2026 17:38:39 +0800</lastBuildDate>
 <atom:link href="https://paulwebster068-cyber.github.io/xmd-rss/rss.xml" rel="self" type="application/rss+xml" />
 <image>
     <url>https://paulwebster068-cyber.github.io/xmd-rss/favicon.ico</url>
     <title>老大的X收藏</title>
     <link>https://paulwebster068-cyber.github.io/xmd-rss/</link>
 </image>
+
+<item>
+    <title>OpenClaw从中级到高级完整教程</title>
+    <link>https://paulwebster068-cyber.github.io/xmd-rss/#2026-02-26</link>
+    <guid isPermaLink="false">2026-02-26_OpenClaw从中级到高级完整教程</guid>
+    <pubDate>Thu, 26 Feb 2026 17:38:30 +0800</pubDate>
+    <dc:creator>未知</dc:creator>
+    <author>未知</author>
+    <description><![CDATA[]]></description>
+    <content:encoded><![CDATA[
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333;">
+            <h1 style="color: #1a73e8; border-bottom: 2px solid #eee; padding-bottom: 10px;">OpenClaw从中级到高级完整教程</h1>
+            <p style="color: #666; font-size: 14px;">
+                <strong>作者:</strong> @未知 | 
+                <strong>日期:</strong> 2026-02-26 | 
+                <a href="" target="_blank" style="color: #ff6600;">阅读原文 →</a>
+            </p>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+            <h2 style="color: #333; font-size: 18px;">📋 文章摘要</h2>
+            <p>暂无摘要</p>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+            <h2 style="color: #333; font-size: 18px;">📖 正文</h2>
+            <div style="white-space: pre-wrap; word-wrap: break-word;">
+                <div style='font-size: 16px; line-height: 1.8;'>OpenClaw 从中级到高级完整教程<br/>
+<br/>
+## 最后更新：2026 年 2 月<br/>
+<br/>
+## 目录<br/>
+<br/>
+1. 教程说明：适合谁学习<br/>
+<br/>
+2. 学习路线：从基础到进阶<br/>
+<br/>
+3. 核心配置：[AGENTS.md](http://agents.md/) 工作规范<br/>
+<br/>
+4. 记忆优化：构建可靠的记忆体系<br/>
+<br/>
+5. 子 Agent 应用：团队协作模式<br/>
+<br/>
+6. 定时任务：Cron 自动化实践<br/>
+<br/>
+7. Skill 开发：扩展 AI 能力<br/>
+<br/>
+8. 多渠道部署：全平台接入方案<br/>
+<br/>
+9. 性能调优：配置参数详解<br/>
+<br/>
+10. 实战练习清单<br/>
+<br/>
+11. 疑难解答<br/>
+<br/>
+12. 进阶学习资源<br/>
+<br/>
+## 教程说明：适合谁学习<br/>
+<br/>
+学习前提<br/>
+<br/>
+本教程面向已经完成 OpenClaw 基础配置的用户。在开始之前，请确认你已经：<br/>
+<br/>
+✅ 成功安装 OpenClaw 并能正常运行<br/>
+✅ 完成基本配置文件的创建（[SOUL.md](http://soul.md/) / [USER.md](http://user.md/) / [IDENTITY.md](http://identity.md/)）<br/>
+✅ 了解记忆系统的基本概念（[MEMORY.md](http://memory.md/) 和 memorySearch）<br/>
+✅ 熟悉 workspace 目录结构<br/>
+✅ 具备基本的命令行操作能力<br/>
+<br/>
+如果上述条件尚未满足，建议先阅读 https://x.com/onehopeA9/status/2025934420893708433<br/>
+<br/>
+技术要求<br/>
+<br/>
+- OpenClaw 已安装并正常运行<br/>
+<br/>
+- 至少一个 AI 模型 API（Claude 或 GPT）<br/>
+<br/>
+- 理解 JSON 和 Markdown 格式<br/>
+<br/>
+- 基本的文件系统操作能力<br/>
+<br/>
+你将学到什么<br/>
+<br/>
+完成本教程后，你的 OpenClaw 将实现以下能力提升：<br/>
+<br/>
+## 学习路线：从基础到进阶<br/>
+<br/>
+推荐学习顺序<br/>
+<br/>
+第一阶段：工作规范建立（30-60 分钟）<br/>
+<br/>
+- 创建 [AGENTS.md](http://agents.md/) 工作手册<br/>
+<br/>
+- 定义 session 启动流程<br/>
+<br/>
+- 设置记忆写入规范<br/>
+<br/>
+- 配置安全边界<br/>
+<br/>
+第二阶段：记忆系统优化（60-120 分钟）<br/>
+<br/>
+- 启用 memoryFlush 防止信息丢失<br/>
+<br/>
+- 优化日志格式提升检索精度<br/>
+<br/>
+- 配置自动维护机制<br/>
+<br/>
+- 调整 embedding 模型<br/>
+<br/>
+第三阶段：高级功能应用（120-240 分钟）<br/>
+<br/>
+- 部署子 Agent 实现任务分发<br/>
+<br/>
+- 创建 Cron 定时任务<br/>
+<br/>
+- 开发自定义 Skill<br/>
+<br/>
+- 配置多渠道接入<br/>
+<br/>
+第四阶段：性能调优（1-2 天）<br/>
+<br/>
+- 调整模型参数<br/>
+<br/>
+- 优化 token 使用<br/>
+<br/>
+- 配置缓存策略<br/>
+<br/>
+- 监控系统性能<br/>
+<br/>
+学习建议<br/>
+<br/>
+1. 循序渐进：不要跳过基础步骤，每个配置都有其作用<br/>
+<br/>
+2. 实践验证：每完成一个配置，立即测试验证效果<br/>
+<br/>
+3. 记录问题：遇到问题及时记录，便于后续排查<br/>
+<br/>
+4. 备份配置：重要修改前备份配置文件<br/>
+<br/>
+## 核心配置：[AGENTS.md](http://agents.md/) AI打工守则<br/>
+<br/>
+为什么需要 [AGENTS.md](http://agents.md/)<br/>
+<br/>
+在基础教程中，我们创建了描述 AI 性格的 [SOUL.md](http://soul.md/)、描述用户信息的 [USER.md](http://user.md/)、以及定义身份的 [IDENTITY.md](http://identity.md/)。但这些文件只解决了“AI 是谁”和“用户是谁”的问题，并没有告诉 AI“如何工作”。<br/>
+<br/>
+[AGENTS.md](http://agents.md/) 的作用是定义 AI 的工作流程和行为准则，类似于员工手册。它告诉 AI：<br/>
+<br/>
+- 每次启动时应该读取哪些文件<br/>
+<br/>
+- 记忆应该如何组织和存储<br/>
+<br/>
+- 哪些操作需要用户确认<br/>
+<br/>
+- 如何处理不同类型的任务<br/>
+<br/>
+类比说明：<br/>
+<br/>
+- [SOUL.md](http://soul.md/) → 个人性格档案<br/>
+<br/>
+- [USER.md](http://user.md/) → 服务对象信息<br/>
+<br/>
+- [IDENTITY.md](http://identity.md/) → 身份标识<br/>
+<br/>
+- [AGENTS.md](http://agents.md/) → 工作流程手册<br/>
+<br/>
+Session 启动配置<br/>
+<br/>
+OpenClaw 每次启动新会话时都处于“初始状态”，需要通过读取文件来恢复记忆和上下文。合理的启动流程可以确保 AI 快速进入工作状态。<br/>
+<br/>
+配置文件位置： workspace/AGENTS.md<br/>
+<br/>
+启动流程配置：<br/>
+<br/>
+```markdown<br/>
+Session 启动流程<br/>
+<br/>
+每次会话开始时，按以下顺序自动执行：<br/>
+<br/>
+1. 读取 `SOUL.md` - 加载性格和行为风格<br/>
+2. 读取 `USER.md` - 了解用户背景和偏好<br/>
+3. 读取 `memory/YYYY-MM-DD.md` - 加载今天和昨天的日志<br/>
+4. 如果是主会话：额外读取 `MEMORY.md` - 加载核心记忆索引<br/>
+<br/>
+以上操作无需询问，自动执行。<br/>
+```<br/>
+<br/>
+配置说明：<br/>
+<br/>
+步骤 1-2：加载基础信息 <br/>
+[SOUL.md](http://soul.md/) 和 [USER.md](http://user.md/) 通常很小（&lt;1KB），每次都读取不会造成性能负担。这两个文件确保 AI 知道自己的角色定位。<br/>
+<br/>
+步骤 3：加载近期日志<br/>
+读取今天和昨天的日志文件，可以让 AI 快速了解最近发生的事情。之所以包含昨天的日志，是因为如果当前时间是凌晨，今天的日志可能还是空的。<br/>
+<br/>
+步骤 4：条件加载核心记忆 <br/>
+[MEMORY.md](http://memory.md/) 可能包含敏感信息（如服务器配置、API 密钥等），因此只在主会话中加载。OpenClaw 支持多种会话类型：<br/>
+<br/>
+- 主会话：用户直接对话（如 Discord 私聊、WebChat）<br/>
+<br/>
+- 群聊会话：多人群组对话<br/>
+<br/>
+- 子 Agent 会话：子任务执行会话<br/>
+<br/>
+- Cron 会话：定时任务触发的会话<br/>
+<br/>
+AI 会自动识别当前会话类型，你只需在 [AGENTS.md](http://agents.md/) 中定义规则即可。<br/>
+<br/>
+记忆管理规范<br/>
+<br/>
+OpenClaw 的记忆系统采用分层设计，不同类型的信息存储在不同的文件中。在 [AGENTS.md](http://agents.md/) 中明确定义记忆管理规范，可以确保信息被正确归档。<br/>
+<br/>
+记忆层级结构：<br/>
+<br/>
+```plaintext<br/>
+## Memory<br/>
+<br/>
+You wake up fresh each session. These files are your continuity.<br/>
+<br/>
+### 记忆分层<br/>
+| 层级 | 文件 | 用途 |<br/>
+|</div>
+            </div>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+            <p style="color: #999; font-size: 12px; text-align: center;">
+                由 张辽抓取器 自动生成 | 
+                <a href="https://paulwebster068-cyber.github.io/xmd-rss/" style="color: #999;">RSS订阅</a>
+            </p>
+        </div>
+    ]]></content:encoded>
+</item>
+
+<item>
+    <title>用OpenClaw搭建虚拟量化对冲基金公司</title>
+    <link>https://paulwebster068-cyber.github.io/xmd-rss/#2026-02-26</link>
+    <guid isPermaLink="false">2026-02-26_用OpenClaw搭建虚拟量化对冲基金公司</guid>
+    <pubDate>Thu, 26 Feb 2026 17:38:30 +0800</pubDate>
+    <dc:creator>未知</dc:creator>
+    <author>未知</author>
+    <description><![CDATA[]]></description>
+    <content:encoded><![CDATA[
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333;">
+            <h1 style="color: #1a73e8; border-bottom: 2px solid #eee; padding-bottom: 10px;">用OpenClaw搭建虚拟量化对冲基金公司</h1>
+            <p style="color: #666; font-size: 14px;">
+                <strong>作者:</strong> @未知 | 
+                <strong>日期:</strong> 2026-02-26 | 
+                <a href="" target="_blank" style="color: #ff6600;">阅读原文 →</a>
+            </p>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+            <h2 style="color: #333; font-size: 18px;">📋 文章摘要</h2>
+            <p>暂无摘要</p>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+            <h2 style="color: #333; font-size: 18px;">📖 正文</h2>
+            <div style="white-space: pre-wrap; word-wrap: break-word;">
+                <div style='font-size: 16px; line-height: 1.8;'>花了两天时间用openclaw搭建了一个虚拟的量化对冲基金公司，员工了都到位了 https://t.co/xkfcfktjsU</div>
+            </div>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+            <p style="color: #999; font-size: 12px; text-align: center;">
+                由 张辽抓取器 自动生成 | 
+                <a href="https://paulwebster068-cyber.github.io/xmd-rss/" style="color: #999;">RSS订阅</a>
+            </p>
+        </div>
+    ]]></content:encoded>
+</item>
+
+<item>
+    <title>别再只做KOL了，"超级个体帝国"的时代已经全面爆发</title>
+    <link>https://paulwebster068-cyber.github.io/xmd-rss/#2026-02-26</link>
+    <guid isPermaLink="false">2026-02-26_别再只做KOL了，"超级个体帝国"的时代已经全面爆发</guid>
+    <pubDate>Thu, 26 Feb 2026 17:38:15 +0800</pubDate>
+    <dc:creator>未知</dc:creator>
+    <author>未知</author>
+    <description><![CDATA[]]></description>
+    <content:encoded><![CDATA[
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333;">
+            <h1 style="color: #1a73e8; border-bottom: 2px solid #eee; padding-bottom: 10px;">别再只做KOL了，"超级个体帝国"的时代已经全面爆发</h1>
+            <p style="color: #666; font-size: 14px;">
+                <strong>作者:</strong> @未知 | 
+                <strong>日期:</strong> 2026-02-26 | 
+                <a href="" target="_blank" style="color: #ff6600;">阅读原文 →</a>
+            </p>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+            <h2 style="color: #333; font-size: 18px;">📋 文章摘要</h2>
+            <p>暂无摘要</p>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+            <h2 style="color: #333; font-size: 18px;">📖 正文</h2>
+            <div style="white-space: pre-wrap; word-wrap: break-word;">
+                <div style='font-size: 16px; line-height: 1.8;'>深度洞察｜别再只做 KOL 了，“超级个体帝国”的时代已经全面爆发<br/>
+<br/>
+&gt; 最近，北美创投圈和商业IP圈的大佬 Gary Vaynerchuk 抛出了一个极其犀利的商业断言：“超级个体帝国”的时代已经彻底到来。<br/>
+<br/>
+只要手里有一部智能手机，任何人都有机会平地起高楼，建起一个庞大的商业帝国。这不再是资本圈的忽悠，而是正在发生的现实。<br/>
+<br/>
+GaryVee 认为，我们已经跨过了一个临界点。社交媒体存在的时间足够长，流量和影响力的玩法已经被彻底重塑。与其说这是一篇预测，不如说这是一份写给所有内容创作者和创业者的“行动指南”。以下是对他这次深度洞察的硬核拆解。<br/>
+<br/>
+## 为什么偏偏是现在？—— 商业门槛的“脚斩”<br/>
+<br/>
+回想十多年前，普通人想做一个走向全国的品牌，简直是天方夜谭。<br/>
+<br/>
+你要砸几千万买电视广告，还要交大几千万的“入场费”才能把货铺进沃尔玛这样的连锁超市。没个几亿身家，连牌桌都上不去。<br/>
+<br/>
+但现在呢？GaryVee 一针见血地指出：分发渠道和注意力已经被彻底平权。<br/>
+<br/>
+过去，电视网和线下大卖场是横在创业者面前的大山；今天，电商搞定了基建，抖音、小红书搞定了流量。普通人甚至不需要花一分钱，只要内容能切中要害，就能靠自然流量疯狂野蛮生长。<br/>
+<br/>
+不论你是想做一家体育经纪公司、开发一款餐厅App、做一个红酒直销品牌，还是打造属于自己的超级IP，试错成本都已经无限趋近于零。当普通人手里掌握的“注意力流量”甚至超过了那些砸重金买广告的大企业时，游戏规则就彻底改变了。<br/>
+<br/>
+谁是天花板？—— 那个把赚来的钱全砸进视频里的 MrBeast<br/>
+<br/>
+提到“超级个体帝国”，就绕不开一个神级人物：MrBeast（野兽先生）。<br/>
+<br/>
+在 GaryVee 眼里，如果说早期的网红还在靠接商单、卖小课赚钱，那么 MrBeast 就是把“个体”做成“财团”的终极教科书。<br/>
+<br/>
+## 为什么 MrBeast 如此可怕？<br/>
+<br/>
+- 极致的耐心与克制： 当其他博主靠 YouTube 广告分成买跑车、买豪宅时，他蜗居在南卡罗来纳州，把赚到的每一分钱全砸进下一个视频里。为了拍好一期节目，他能眼都不眨地烧掉上百万美元；为了极高的点击率，他光是一张封面图就能砸进去六位数。<br/>
+<br/>
+- 降维打击的复合能力： 他不仅有顶级综艺教父般的制作嗅觉，更极其懂得如何在内容中融入商业合作，而又不显得吃相难看。<br/>
+<br/>
+- 从“网红”到“好莱坞”的破壁者： 他的真人秀节目《BeastGames》不仅是他人生的一个缩影，更是给传统好莱坞的一记响亮耳光。它向所有人证明了：只要你在互联网上拥有足够庞大的受众，你就能轻易降维打击大银幕和传统影视圈。<br/>
+<br/>
+MrBeast 最鼓舞人心的地方在于：他留下了“通关录像”。翻看他早期的视频，也就是一个坐在卧室里、设备简陋的青涩男孩。他是真正意义上，靠着“一个视频接着一个视频”死磕出来的帝国。<br/>
+<br/>
+## 核心演变：创作者本人，就是一家“全能制片厂”<br/>
+<br/>
+这是 GaryVee 提出的另一个极其核心的观点：未来的创作者，不再依附于任何人，他们自己就是一个Studio（制片厂）。<br/>
+<br/>
+不要把现在的头部达人仅仅看作是“拍视频的”。MrBeast 有自己的内容工厂和零食品牌（Feastables）；GaryVee 自己有全套的制作团队，还自己打造了 VeeFriends 漫画IP，并在直播间卖爆。还有 Alex Cooper（知名播客主）、Steven Bartlett 等等……<br/>
+<br/>
+未来的超级个体，标配不仅仅是几个剪辑师，而是会拥有自己完整的消费品（CPG）供应链、营销矩阵和商业护城河。<br/>
+<br/>
+在过去，你需要一家大公司来支撑这些运转；而在今天，直播（Live Streaming）补齐了变现的最后一环。无论是 Twitch、TikTok Live 还是 YouTube Live，目前仍然是“被严重低估的注意力洼地”。<br/>
+<br/>
+别再迷信算法，算法就是“观众的投票器”<br/>
+<br/>
+很多人天天研究怎么“讨好算法”。GaryVee 把这件事说得很透：算法和观众，根本就是一回事。<br/>
+<br/>
+所谓的算法，不过是一张黑白分明的“成绩单”。你所做的一切内容，归根结底是做给“人”看的。当你以受众为中心，让观众看得爽、觉得有价值，算法自然会把你捧上神坛。<br/>
+<br/>
+## 下一个十年：遍地都是低垂的果实<br/>
+<br/>
+早在 2010 年，GaryVee 就预测过：未来会有无数人靠在网上聊种花一年赚 8 万美金，靠聊滑板赚 6.5 万美金。当时很多人觉得是天方夜谭，现在这早已成了常态。<br/>
+<br/>
+随着 AI 的爆发和 Web3/区块链技术的成熟，“个人品牌”的边界会被无限拓宽。一个超级个体，可以轻松裂变出多个不同领域的业务线，成为一家“跨国微型企业”。<br/>
+<br/>
+这就是为什么 GaryVee 如此兴奋——绝大多数人根本没有意识到，前面还有多少“低垂的果实”等着被摘取。只要你愿意深耕自己的热爱，用内容去换取注意力，最后再辅以宏观的商业变现手段，回报将是惊人的。<br/>
+<br/>
+属于“超级个体帝国”的狂欢才刚刚开始。 对于那些已经积累了社交媒体粉丝或私域流量的人来说，收割的季节到了。</div>
+            </div>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+            <p style="color: #999; font-size: 12px; text-align: center;">
+                由 张辽抓取器 自动生成 | 
+                <a href="https://paulwebster068-cyber.github.io/xmd-rss/" style="color: #999;">RSS订阅</a>
+            </p>
+        </div>
+    ]]></content:encoded>
+</item>
+
+<item>
+    <title>深度扒一扒Jane Street，没想到它居然是SBF的老东家</title>
+    <link>https://paulwebster068-cyber.github.io/xmd-rss/#2026-02-26</link>
+    <guid isPermaLink="false">2026-02-26_深度扒一扒Jane Street，没想到它居然是SBF的老东家</guid>
+    <pubDate>Thu, 26 Feb 2026 17:38:15 +0800</pubDate>
+    <dc:creator>未知</dc:creator>
+    <author>未知</author>
+    <description><![CDATA[]]></description>
+    <content:encoded><![CDATA[
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333;">
+            <h1 style="color: #1a73e8; border-bottom: 2px solid #eee; padding-bottom: 10px;">深度扒一扒Jane Street，没想到它居然是SBF的老东家</h1>
+            <p style="color: #666; font-size: 14px;">
+                <strong>作者:</strong> @未知 | 
+                <strong>日期:</strong> 2026-02-26 | 
+                <a href="" target="_blank" style="color: #ff6600;">阅读原文 →</a>
+            </p>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+            <h2 style="color: #333; font-size: 18px;">📋 文章摘要</h2>
+            <p>暂无摘要</p>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+            <h2 style="color: #333; font-size: 18px;">📖 正文</h2>
+            <div style="white-space: pre-wrap; word-wrap: break-word;">
+                <div style='font-size: 16px; line-height: 1.8;'>深度扒一扒Jane Street ，没想它到居然是SBF的老东家<br/>
+<br/>
+今天，SBF 在加州“低保”监狱打了个寒颤，自他进监狱5年，没想到他大哥Jane Street也可能要进来了<br/>
+<br/>
+先回答大家最关心的：SBF 现在人在哪？<br/>
+<br/>
+根据最新的公开资料，SBF 在被判处 25 年监禁后，目前已经被转移到了位于加州的 FCI Terminal Island（终点岛联邦惩教机构）<br/>
+<br/>
+虽然判了 25 年，但由于表现良好和参加监狱项目，他的预计释放时间已经更新到了 2044 年 12 月 14 日。到那时，这位曾经的“币圈首富”也将年过五十了<br/>
+<br/>
+一、Jane Street：SBF 的“黄埔军校”<br/>
+<br/>
+很多人以为 SBF 是自学成才，其实不然。他的所有手段，几乎都是在 Jane Street（简街资本） 打下的底子。他在那里待了三年多（2013-2017），那段时间对他性格和交易逻辑的塑造是毁灭性的。<br/>
+<br/>
+在简街，员工不被看作是“金融从业者”，而被看作是“概率机器”。<br/>
+<br/>
+赌徒文化： 简街的面试不考你会不会看财报，而是给你 100 个筹码让你玩各种变态的概率游戏。SBF 完美适配了这种逻辑：只要期望值（EV）是正的，哪怕有 99% 的概率归零，也要押上所有筹码去赌那 1% 的暴富。 这种极端的风险偏好，直接导致了后来 Alameda 挪用客户资金去“搏一搏”的行为。<br/>
+<br/>
+OCaml 与算法： 简街对技术的严苛要求让 SBF 明白，在快节奏的交易市场，靠人脑是不行的，得靠算法。FTX 后来的高频撮合引擎，隐约能看到简街那套 OCaml 系统的影子。<br/>
+<br/>
+2. “教父” SBF 与他的“简街帮”<br/>
+<br/>
+SBF 并不是一个人离开简街的，他带走的是一整套“企业基因”。<br/>
+<br/>
+Caroline Ellison： 这位前 Alameda 的 CEO，其实是 SBF 在简街时的徒弟。SBF 当时负责带实习生，一眼就相中了同样信奉“有效利他主义”的 Caroline。<br/>
+<br/>
+人才摇篮： 后来 FTX 和 Alameda 的核心高管，很多都有简街背景。甚至可以说，FTX 就像是简街的一个“暗黑镜像版”：学到了最顶级的套利技术，却抛弃了最基本的合规底线。<br/>
+<br/>
+二、Jane Street “黄埔军校”创立<br/>
+<br/>
+Jane Street 成立于 2000 年。四个创始人（Tim Reynolds, Rob Granieri 等）全都来自 Susquehanna (SIG)——都是量化交易的鼻祖。<br/>
+<br/>
+但他们离开 SIG 时带走了一套更极端的理念：“我们不需要名声，不需要客户，我们只要极致的数学套利。” 最初，他们就在一个简陋的小办公室里，盯着 ETF（交易所交易基金）这种当时还没人看得上的“笨重”产品找差价。谁也没想到，20 年后，他们成了全球 ETF 的“定海神官”<br/>
+<br/>
+核心科技：OCaml 信仰与“代码圣经”<br/>
+<br/>
+在华尔街，大家要么用 C++ 抢速度，要么用 Python 搞分析。但 Jane Street 是一朵奇葩：他们全公司只信奉一种极其冷门的编程语言——OCaml。<br/>
+<br/>
+为什么用它？ 因为 OCaml 是一种“函数式编程”。它极其严谨，写错一个逻辑系统根本跑不通。<br/>
+<br/>
+降维打击： 这种语言让简街的交易系统像瑞士钟表一样稳定。当别人的系统在市场剧震中崩盘时，简街的机器还在冷静地收割。在他们眼里，代码就是法律，也是印钞机。<br/>
+<br/>
+当然除了OCaml，还有上面提到的赌徒文化<br/>
+<br/>
+简街不看你的金融背景，他们看的是你对概率的直觉。<br/>
+<br/>
+面试考什么？ 别提什么市盈率。他们会让你在几秒钟内估算“全美国有多少个加油站”，或者跟你玩各种变态的赔率博弈游戏。<br/>
+<br/>
+德扑文化： 简街内部非常推崇扑克。他们认为交易就是一场带随机性的博弈。你要做的不是预测未来，而是在胜率 51% 的时候，敢于押上所有筹码。<br/>
+<br/>
+这种文化培养出了一群极度冷血、对亏损无感、只对概率忠诚的交易员。这也是为什么他们砸盘时，手从来不抖。<br/>
+<br/>
+三、冷血往事——UST与10点砸盘<br/>
+<br/>
+根据联邦法院显示：简街在2022年砸盘UST 被起诉，很多人以为 UST 的崩盘是自然脱锚，但 2026 年 2 月披露的法庭文件显示：这是一场精准的金融暗杀<br/>
+<br/>
+2022 年 5 月，当 UST 刚刚出现一丝裂痕时，绝大多数散户还在幻想着 LFG（Luna 基金会）会来救市。<br/>
+<br/>
+黑手现身： 简街资本就在这最关键的 10 分钟里，利用他们掌握的底层流动性数据，反手抛售了价值 8500 万美元 的 UST。<br/>
+<br/>
+连锁反应： 这笔钱对简街来说是毛毛雨，但在那个极度脆弱的时刻，它是压死骆驼的最后一根钢梁。它直接砸穿了算法稳定的心理防线，触发了死亡螺旋。<br/>
+<br/>
+今天又有大佬爆料，简街资本每天10点开始砸盘，把BTC 砸2%，然后拉回来吃散户尸体<br/>
+<br/>
+很多人问：“老司机，为什么总是晚上 10 点砸盘？”<br/>
+<br/>
+其实逻辑很简单。北京时间 22:00，正好是美股开盘（9:30 AM ET）前后的疯狂时间。作为全球最大的 ETF 做市商，简街在这个点儿手里握着海量的买卖盘数据和现货。<br/>
+<br/>
+1. 寻找“流动性口袋”<br/>
+<br/>
+简街的系统（那套冷门的 OCaml 算法）会在 10 点前扫描全网交易所的挂单深度。他们能精准算出：如果我现在抛售 2000 个大饼，价格会跌到哪？哪里藏着最多散户的止损单和爆仓线？那个位置，就叫“流动性口袋”。<br/>
+<br/>
+2. 借力打力（ETF 申赎）<br/>
+<br/>
+作为贝莱德等 ETF 的背后推手，简街每天要处理海量的实物申赎。比如，如果今天散户在美股盘前疯狂买入 ETF，简街就需要去加密现货市场买入对应的大饼。 黑箱操作来了： 他们不会直接买。他们会先在 10:00 准时反手砸盘，把价格打进那个“口袋”，触发一连串止损单。等大家都在恐慌抛售时，他们再用极低的价格接走筹码，反手完成 ETF 的对冲。<br/>
+<br/>
+3. 瞬间拉回（这就是那个针）<br/>
+<br/>
+这就是为什么你经常看到一个深不见底的长下影线。砸盘是为了吃肉，吃完肉瞬间拉回，美股开盘后一切回归正常。剩下的只有盯着爆仓短信发呆的你。<br/>
+<br/>
+总结：<br/>
+<br/>
+2026 幸存者指南：如何躲开大象的脚印？<br/>
+<br/>
+扒完这些，老司机给各位几条保命建议：<br/>
+<br/>
+1. 避开“死亡窗口”： 北京时间 21:50 - 22:30 之间，严禁开 10 倍以上杠杆。这是大象翻身的时间，蚂蚁跑得再快也得被踩死。<br/>
+<br/>
+2. 不接飞刀： 看到 10 点钟那种垂直向下的线，别急着抄底。简街的算法通常会有“余震”，等美股盘中稳定后再入场。<br/>
+<br/>
+3. 盯紧基差： 关注 ETF 的盘前溢价数据。如果溢价过高，简街大概率要在 10 点砸现货来平摊成本。</div>
+            </div>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+            <p style="color: #999; font-size: 12px; text-align: center;">
+                由 张辽抓取器 自动生成 | 
+                <a href="https://paulwebster068-cyber.github.io/xmd-rss/" style="color: #999;">RSS订阅</a>
+            </p>
+        </div>
+    ]]></content:encoded>
+</item>
+
+<item>
+    <title>1个规格不够酷，10个规格才酷——AI时代的软件设计新范式</title>
+    <link>https://paulwebster068-cyber.github.io/xmd-rss/#2026-02-26</link>
+    <guid isPermaLink="false">2026-02-26_1个规格不够酷，10个规格才酷——AI时代的软件设计新范式</guid>
+    <pubDate>Thu, 26 Feb 2026 17:37:14 +0800</pubDate>
+    <dc:creator>未知</dc:creator>
+    <author>未知</author>
+    <description><![CDATA[]]></description>
+    <content:encoded><![CDATA[
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333;">
+            <h1 style="color: #1a73e8; border-bottom: 2px solid #eee; padding-bottom: 10px;">1个规格不够酷，10个规格才酷——AI时代的软件设计新范式</h1>
+            <p style="color: #666; font-size: 14px;">
+                <strong>作者:</strong> @未知 | 
+                <strong>日期:</strong> 2026-02-26 | 
+                <a href="" target="_blank" style="color: #ff6600;">阅读原文 →</a>
+            </p>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+            <h2 style="color: #333; font-size: 18px;">📋 文章摘要</h2>
+            <p>暂无摘要</p>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+            <h2 style="color: #333; font-size: 18px;">📖 正文</h2>
+            <div style="white-space: pre-wrap; word-wrap: break-word;">
+                <div style='font-size: 16px; line-height: 1.8;'>1 spec isn't cool. You know what's cool? 10 specs.<br/>
+<br/>
+We optimized software development for speed for twenty years. Now AI agents can prototype faster than any team ever could, and the bottleneck has flipped. The constraint used to be "can we build it." Now it's "do we know what we're building."<br/>
+<br/>
+This changes our understanding of the purpose of specs. They aren’t canonical truths, but something different. Specs are hypotheses you can test, run in parallel, and throw away. And this is the first time software engineers have been able to work this way, at scale.<br/>
+<br/>
+## The cost that held us back<br/>
+<br/>
+There's a framework in design thinking called the [Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/). Two phases: first you diverge, exploring broadly and generating options, then you converge, narrowing to the best solution.<br/>
+<br/>
+The Double Diamond maps creative work as two cycles of diverge-then-converge. Software teams have always skipped the first diamond because they couldn't afford it.<br/>
+<br/>
+Designers have used this for decades. Software teams never really could, and the reason is cost. Writing one implementation takes weeks, so you can't afford to build three approaches and compare them. Teams converge on a direction: one spec, one architecture, one shot. Pick something plausible and commit before you can evaluate alternatives. This is why so many architecture decisions feel arbitrary in retrospect. It wasn’t that the team lacked creativity, it was just that they couldn't afford to explore.<br/>
+<br/>
+A [Stanford study on parallel prototyping](https://dl.acm.org/doi/10.1145/1753326.1753426) is worth reading here. Teams who built multiple prototypes before committing produced better designs and felt more confident in their final choices than teams who refined a single prototype. Not surprising, it just wasn’t viable from a time or human capital perspective before.<br/>
+<br/>
+Agents change the cost structure at the prototype level: working code in hours rather than weeks, against your actual codebase rather than a toy example. In January, Jaana Dogan, a principal engineer at Google, [posted](https://medium.com/startup-insider-edge/a-google-lead-just-replicated-her-teams-year-long-project-in-one-hour-using-a-competitor-s-ai-096ef1e36d5c) that she'd used Claude Code to replicate a distributed agent orchestrator her team had spent a year building. It took an hour. The nuance she added two days later, after the predictable internet reaction, is the part worth paying attention to: the team had spent that year building multiple versions, each with different tradeoffs, and she fed all of that accumulated thinking to the agent. What collapsed into an hour was the execution. The year of architectural reasoning is what made it possible. When exploration is cheap, you stop guessing and start testing.<br/>
+<br/>
+## What this looks like<br/>
+<br/>
+Same effort, radically different information surface. The old way bets everything on one spec being right. The new way runs the experiment first.<br/>
+<br/>
+Say you're adding a permissions system to a product that's outgrown its original RBAC model. Multi-tenant customers are hacking around limitations and the security team is nervous.<br/>
+<br/>
+The old way: weeks of architecture discussions, one RFC, arguments in Slack, and eventually someone picks ABAC because they read a blog post. You build it, discover during code review that it doesn't handle the customer hierarchy edge case, and ship anyway with a TODO.<br/>
+<br/>
+The new way: write four specs. One extends the existing RBAC with finer-grained roles. One migrates to full ABAC. One proposes a hybrid. One explores a policy engine that externalizes all authorization logic. Agents build all four against your actual codebase and then you evaluate with real criteria: which approach handles multi-tenant hierarchy cleanly? Which introduces the fewest migration risks? Which can your team actually maintain in six months?<br/>
+<br/>
+You made the decision with evidence. Sometimes three of the four specs turn out to be dead ends, but you learned that in two days instead of two quarters, and you learned it before committing to six months of implementation.<br/>
+<br/>
+## The skill that matters now<br/>
+<br/>
+For a long time, developer productivity meant translating intent into code faster. Better editors, better languages, better frameworks, all optimized for execution speed. That's the constraint that's going away, at least at the prototype level.<br/>
+<br/>
+The scarce resource has always been clarity: knowing what to build, defining boundaries, making implicit knowledge explicit, recognizing failure modes before they become production incidents. Execution just used to be scarce too, so we optimized for that instead and mostly ignored the clarity problem.<br/>
+<br/>
+I've accepted agent suggestions that compiled, passed lint, and still missed the point because I hadn't been clear enough about what I actually wanted. The problem wasn't capability. [The agents we have today are the worst agents we'll use for the rest of 2026](https://www.augmentcode.com/blog/we-re-in-an-exponential), and every model improvement makes execution more reliable. But none of that helps if you don't know what to ask for.<br/>
+<br/>
+We can find clarity with more exploration. Write ten specs. Test them all. Throw away nine. The one you keep will be better than anything you would have designed by committee over three weeks of Slack arguments, because you'll have tested it against the real alternatives, not the hypothetical ones.</div>
+            </div>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+            <p style="color: #999; font-size: 12px; text-align: center;">
+                由 张辽抓取器 自动生成 | 
+                <a href="https://paulwebster068-cyber.github.io/xmd-rss/" style="color: #999;">RSS订阅</a>
+            </p>
+        </div>
+    ]]></content:encoded>
+</item>
+
+<item>
+    <title>如何在AI时代真正获胜（没人告诉你的路线图）</title>
+    <link>https://x.com/kloss_xyz/status/[待补充]</link>
+    <guid isPermaLink="false">2026-02-26_如何在AI时代真正获胜（没人告诉你的路线图）</guid>
+    <pubDate>Thu, 26 Feb 2026 17:36:02 +0800</pubDate>
+    <dc:creator>未知</dc:creator>
+    <author>未知</author>
+    <description><![CDATA[]]></description>
+    <content:encoded><![CDATA[
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333;">
+            <h1 style="color: #1a73e8; border-bottom: 2px solid #eee; padding-bottom: 10px;">如何在AI时代真正获胜（没人告诉你的路线图）</h1>
+            <p style="color: #666; font-size: 14px;">
+                <strong>作者:</strong> @未知 | 
+                <strong>日期:</strong> 2026-02-26 | 
+                <a href="https://x.com/kloss_xyz/status/[待补充]" target="_blank" style="color: #ff6600;">阅读原文 →</a>
+            </p>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+            <h2 style="color: #333; font-size: 18px;">📋 文章摘要</h2>
+            <p>暂无摘要</p>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+            <h2 style="color: #333; font-size: 18px;">📖 正文</h2>
+            <div style="white-space: pre-wrap; word-wrap: break-word;">
+                <div style='font-size: 16px; line-height: 1.8;'>所有人都在争论AI是否会终结世界。末日论者、流量收割者、 drama瘾君子、那些只想博取点击的人。是的，这种颠覆的某些部分确实真实存在。我不是来告诉你它们不存在的。<br/>
+<br/>
+但当所有人都在争论结果时，一小撮人正在混乱中埋头用AI进行建设。多年来我一直在测试、实验、用AI创造，最近几个月更是深入多代理编排，使用的模型数量多到我都数不过来。这不是一篇充满bullshit理论的文章。这是我目前在所有构建方式和运行系统中实际看到有效的做法，以及我对未来的规划。<br/>
+<br/>
+以下是AI时代成功的完整路线图。<br/>
+<br/>
+这也不是你随便浏览一下就忘掉的东西。请收藏并保存它。然后，每当你试图弄清楚在这个新文艺复兴时代该把精力集中在哪里时，就回来看看。<br/>
+<br/>
+让我们开始吧。</div>
+            </div>
+            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
+            <p style="color: #999; font-size: 12px; text-align: center;">
+                由 张辽抓取器 自动生成 | 
+                <a href="https://paulwebster068-cyber.github.io/xmd-rss/" style="color: #999;">RSS订阅</a>
+            </p>
+        </div>
+    ]]></content:encoded>
+</item>
 
 <item>
     <title>为什么2026年是康波周期中重要的一年——AI端侧硬件、人类硅碳2.0升级与宇宙叙事</title>
@@ -3393,479 +3980,6 @@ Automaton的核心机制：
             <h2 style="color: #333; font-size: 18px;">📖 正文</h2>
             <div style="white-space: pre-wrap; word-wrap: break-word;">
                 <div style='font-size: 16px; line-height: 1.8;'></div>
-            </div>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
-            <p style="color: #999; font-size: 12px; text-align: center;">
-                由 张辽抓取器 自动生成 | 
-                <a href="https://paulwebster068-cyber.github.io/xmd-rss/" style="color: #999;">RSS订阅</a>
-            </p>
-        </div>
-    ]]></content:encoded>
-</item>
-
-<item>
-    <title>2025年AI融资六大趋势图表解析</title>
-    <link>https://paulwebster068-cyber.github.io/xmd-rss/#2026-02-24</link>
-    <guid isPermaLink="false">2026-02-24_2025年AI融资六大趋势图表解析</guid>
-    <pubDate>Tue, 24 Feb 2026 22:04:44 +0800</pubDate>
-    <dc:creator>未知</dc:creator>
-    <author>未知</author>
-    <description><![CDATA[问题是什么: AI领域融资呈现极端集中趋势，少数头部公司占据绝大部分资金，创业者和投资者都需要理解这种结构性变化。
-
-解法是什么: Crunchbase通过六张数据图表揭示了2025年AI融资的核心趋势：AI占全球创业融资近50%（2023亿美元），基础模型公司占AI融资的40%（800亿美元），美国占AI融资的79%，58%的资金集中在5亿美元以上的超大规模轮次。
-
-有什么启发: AI融资已进入"寡头时代"——OpenAI（5000亿美元估值）和Anthropic（1830亿美元）两家占独角兽榜单近10%价值。2026年关键问题是：领先模型公司会继续通过股权融资筹集数百亿美元，还是转而依靠与超大规模云服务商的合作？]]></description>
-    <content:encoded><![CDATA[
-        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333;">
-            <h1 style="color: #1a73e8; border-bottom: 2px solid #eee; padding-bottom: 10px;">2025年AI融资六大趋势图表解析</h1>
-            <p style="color: #666; font-size: 14px;">
-                <strong>作者:</strong> @未知 | 
-                <strong>日期:</strong> 2026-02-24 | 
-                <a href="" target="_blank" style="color: #ff6600;">阅读原文 →</a>
-            </p>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
-            <h2 style="color: #333; font-size: 18px;">📋 文章摘要</h2>
-            <div style='background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0;'><p style='margin: 5px 0;'>问题是什么: AI领域融资呈现极端集中趋势，少数头部公司占据绝大部分资金，创业者和投资者都需要理解这种结构性变化。</p><p style='margin: 5px 0;'>解法是什么: Crunchbase通过六张数据图表揭示了2025年AI融资的核心趋势：AI占全球创业融资近50%（2023亿美元），基础模型公司占AI融资的40%（800亿美元），美国占AI融资的79%，58%的资金集中在5亿美元以上的超大规模轮次。</p><p style='margin: 5px 0;'>有什么启发: AI融资已进入"寡头时代"——OpenAI（5000亿美元估值）和Anthropic（1830亿美元）两家占独角兽榜单近10%价值。2026年关键问题是：领先模型公司会继续通过股权融资筹集数百亿美元，还是转而依靠与超大规模云服务商的合作？</p></div>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
-            <h2 style="color: #333; font-size: 18px;">📖 正文</h2>
-            <div style="white-space: pre-wrap; word-wrap: break-word;">
-                <div style='font-size: 16px; line-height: 1.8;'></div>
-            </div>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
-            <p style="color: #999; font-size: 12px; text-align: center;">
-                由 张辽抓取器 自动生成 | 
-                <a href="https://paulwebster068-cyber.github.io/xmd-rss/" style="color: #999;">RSS订阅</a>
-            </p>
-        </div>
-    ]]></content:encoded>
-</item>
-
-<item>
-    <title>2025年AI智能体：期望与现实</title>
-    <link>https://paulwebster068-cyber.github.io/xmd-rss/#2026-02-24</link>
-    <guid isPermaLink="false">2026-02-24_2025年AI智能体：期望与现实</guid>
-    <pubDate>Tue, 24 Feb 2026 22:03:35 +0800</pubDate>
-    <dc:creator>未知</dc:creator>
-    <author>未知</author>
-    <description><![CDATA[问题是什么: 2025年被科技媒体誉为"AI智能体之年"，但这种宣传中有多少是真实可行的，又有多少是追求点击量的炒作？市场对智能体的期望与现实之间存在巨大鸿沟。
-
-解法是什么: IBM采访了多位内部专家（产品总监Maryam Ashoori博士、高级研究科学家Marina Danilevsky、AI技术架构师Vyoma Gajjar、杰出工程师Chris Hay），通过专家视角分析智能体技术的真实现状。调查发现99%的企业开发者正在探索或开发AI智能体，但真正的自主智能体仍需突破推理、规划和上下文理解等技术瓶颈。
-
-有什么启发: 2025年将是"智能体探索之年"而非"智能体成熟之年"。组织应该理性投资，关注具有规划能力和工具调用能力的LLM增强系统，而不是等待完全自主的智能体。同时需要解决投资回报率（ROI）和安全治理等基础问题。]]></description>
-    <content:encoded><![CDATA[
-        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333;">
-            <h1 style="color: #1a73e8; border-bottom: 2px solid #eee; padding-bottom: 10px;">2025年AI智能体：期望与现实</h1>
-            <p style="color: #666; font-size: 14px;">
-                <strong>作者:</strong> @未知 | 
-                <strong>日期:</strong> 2026-02-24 | 
-                <a href="" target="_blank" style="color: #ff6600;">阅读原文 →</a>
-            </p>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
-            <h2 style="color: #333; font-size: 18px;">📋 文章摘要</h2>
-            <div style='background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0;'><p style='margin: 5px 0;'>问题是什么: 2025年被科技媒体誉为"AI智能体之年"，但这种宣传中有多少是真实可行的，又有多少是追求点击量的炒作？市场对智能体的期望与现实之间存在巨大鸿沟。</p><p style='margin: 5px 0;'>解法是什么: IBM采访了多位内部专家（产品总监Maryam Ashoori博士、高级研究科学家Marina Danilevsky、AI技术架构师Vyoma Gajjar、杰出工程师Chris Hay），通过专家视角分析智能体技术的真实现状。调查发现99%的企业开发者正在探索或开发AI智能体，但真正的自主智能体仍需突破推理、规划和上下文理解等技术瓶颈。</p><p style='margin: 5px 0;'>有什么启发: 2025年将是"智能体探索之年"而非"智能体成熟之年"。组织应该理性投资，关注具有规划能力和工具调用能力的LLM增强系统，而不是等待完全自主的智能体。同时需要解决投资回报率（ROI）和安全治理等基础问题。</p></div>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
-            <h2 style="color: #333; font-size: 18px;">📖 正文</h2>
-            <div style="white-space: pre-wrap; word-wrap: break-word;">
-                <div style='font-size: 16px; line-height: 1.8;'></div>
-            </div>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
-            <p style="color: #999; font-size: 12px; text-align: center;">
-                由 张辽抓取器 自动生成 | 
-                <a href="https://paulwebster068-cyber.github.io/xmd-rss/" style="color: #999;">RSS订阅</a>
-            </p>
-        </div>
-    ]]></content:encoded>
-</item>
-
-<item>
-    <title>2025年AI智能体50+项关键统计与采用趋势</title>
-    <link>https://paulwebster068-cyber.github.io/xmd-rss/#2026-02-24</link>
-    <guid isPermaLink="false">2026-02-24_2025年AI智能体50+项关键统计与采用趋势</guid>
-    <pubDate>Tue, 24 Feb 2026 22:02:27 +0800</pubDate>
-    <dc:creator>未知</dc:creator>
-    <author>未知</author>
-    <description><![CDATA[问题是什么: AI智能体正在快速重塑工作方式，但许多团队仍不清楚如何使用它们以及在何处创造价值。
-
-解法是什么: 本文汇总了2025年50多项经过验证的AI智能体统计数据，涵盖采用率、生产力影响、行业用例、市场规模和新兴趋势。研究表明78%的组织已在使用AI，85%已在至少一个工作流程中采用智能体。市场从2023年的37亿美元增长到2025年的73.8亿美元，预计到2032年将超过1000亿美元。
-
-有什么启发: AI智能体已从概念验证进入实际部署阶段，企业应该构建"智能体堆栈"（开发者层、知识工作者层、工作流程层、控制层）来系统化整合AI能力，而不是依赖单一供应商。]]></description>
-    <content:encoded><![CDATA[
-        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333;">
-            <h1 style="color: #1a73e8; border-bottom: 2px solid #eee; padding-bottom: 10px;">2025年AI智能体50+项关键统计与采用趋势</h1>
-            <p style="color: #666; font-size: 14px;">
-                <strong>作者:</strong> @未知 | 
-                <strong>日期:</strong> 2026-02-24 | 
-                <a href="" target="_blank" style="color: #ff6600;">阅读原文 →</a>
-            </p>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
-            <h2 style="color: #333; font-size: 18px;">📋 文章摘要</h2>
-            <div style='background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0;'><p style='margin: 5px 0;'>问题是什么: AI智能体正在快速重塑工作方式，但许多团队仍不清楚如何使用它们以及在何处创造价值。</p><p style='margin: 5px 0;'>解法是什么: 本文汇总了2025年50多项经过验证的AI智能体统计数据，涵盖采用率、生产力影响、行业用例、市场规模和新兴趋势。研究表明78%的组织已在使用AI，85%已在至少一个工作流程中采用智能体。市场从2023年的37亿美元增长到2025年的73.8亿美元，预计到2032年将超过1000亿美元。</p><p style='margin: 5px 0;'>有什么启发: AI智能体已从概念验证进入实际部署阶段，企业应该构建"智能体堆栈"（开发者层、知识工作者层、工作流程层、控制层）来系统化整合AI能力，而不是依赖单一供应商。</p></div>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
-            <h2 style="color: #333; font-size: 18px;">📖 正文</h2>
-            <div style="white-space: pre-wrap; word-wrap: break-word;">
-                <div style='font-size: 16px; line-height: 1.8;'></div>
-            </div>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
-            <p style="color: #999; font-size: 12px; text-align: center;">
-                由 张辽抓取器 自动生成 | 
-                <a href="https://paulwebster068-cyber.github.io/xmd-rss/" style="color: #999;">RSS订阅</a>
-            </p>
-        </div>
-    ]]></content:encoded>
-</item>
-
-<item>
-    <title>掌握任何事物：拥有你自己的专家系统（12步法）</title>
-    <link>https://x.com/hooeem/status/2020970489926053926></link>
-    <guid isPermaLink="false">2026-02-24_掌握任何事物：拥有你自己的专家系统（12步法）</guid>
-    <pubDate>Tue, 24 Feb 2026 20:02:32 +0800</pubDate>
-    <dc:creator>hooeem</dc:creator>
-    <author>hooeem</author>
-    <description><![CDATA[1. 问题是啥？
-互联网上有海量信息，但我们不知道如何有效利用。传统学习路径缓慢且低效，依赖外部课程和认证，无法快速获得实战能力。知识就在那里，我们只是缺少利用它的方法。
-
-2. 解法是啥？
-通过构建个人专家系统加速掌握任何领域：使用AI工具（NotebookLM处理广度，Claude处理深度），通过12个步骤创建属于你自己的专家系统。核心流程：定义学习领域→识别专家资源→在NotebookLM中聚合资源→提取综合指南→构建Claude学习环境→通过项目实战验证→持续迭代优化。
-
-3. 有啥启发？
-1. 拥有系统胜过消费内容——将学习从消费内容转变为构建系统
-2. 实战项目是最佳学习方式——通过实际项目验证和巩固知识
-3. AI可以处理信息广度，人类负责深度思考
-4. 持续迭代比完美计划更重要——建立可复用的知识资产
-5. 专家系统让你在任何领域都能达到精通水平]]></description>
-    <content:encoded><![CDATA[
-        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333;">
-            <h1 style="color: #1a73e8; border-bottom: 2px solid #eee; padding-bottom: 10px;">掌握任何事物：拥有你自己的专家系统（12步法）</h1>
-            <p style="color: #666; font-size: 14px;">
-                <strong>作者:</strong> @hooeem | 
-                <strong>日期:</strong> 2026-02-24 | 
-                <a href="https://x.com/hooeem/status/2020970489926053926>" target="_blank" style="color: #ff6600;">阅读原文 →</a>
-            </p>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
-            <h2 style="color: #333; font-size: 18px;">📋 文章摘要</h2>
-            <div style='background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0;'><h4 style='color: #1a73e8; margin: 15px 0 10px 0;'>1. 问题是啥？</h4><p style='margin: 5px 0;'>互联网上有海量信息，但我们不知道如何有效利用。传统学习路径缓慢且低效，依赖外部课程和认证，无法快速获得实战能力。知识就在那里，我们只是缺少利用它的方法。</p><h4 style='color: #1a73e8; margin: 15px 0 10px 0;'>2. 解法是啥？</h4><p style='margin: 5px 0;'>通过构建个人专家系统加速掌握任何领域：使用AI工具（NotebookLM处理广度，Claude处理深度），通过12个步骤创建属于你自己的专家系统。核心流程：定义学习领域→识别专家资源→在NotebookLM中聚合资源→提取综合指南→构建Claude学习环境→通过项目实战验证→持续迭代优化。</p><h4 style='color: #1a73e8; margin: 15px 0 10px 0;'>3. 有啥启发？</h4><p style='margin: 5px 0 5px 20px;'>• 1. 拥有系统胜过消费内容——将学习从消费内容转变为构建系统</p><p style='margin: 5px 0 5px 20px;'>• 2. 实战项目是最佳学习方式——通过实际项目验证和巩固知识</p><p style='margin: 5px 0 5px 20px;'>• 3. AI可以处理信息广度，人类负责深度思考</p><p style='margin: 5px 0 5px 20px;'>• 4. 持续迭代比完美计划更重要——建立可复用的知识资产</p><p style='margin: 5px 0 5px 20px;'>• 5. 专家系统让你在任何领域都能达到精通水平</p></div>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
-            <h2 style="color: #333; font-size: 18px;">📖 正文</h2>
-            <div style="white-space: pre-wrap; word-wrap: break-word;">
-                <div style='font-size: 16px; line-height: 1.8;'>### 引言：拥有你自己的专家<br/>
-<br/>
-互联网上有海量信息。<br/>
-<br/>
-我们只是不知道如何有效利用它。<br/>
-<br/>
-今天，通过12个步骤，这种情况将改变。<br/>
-<br/>
-你可以拥有一个专家，掌握任何事物。这改变了我们能够运作的方式，因为：<br/>
-<br/>
-你想掌握文案写作？你可以。<br/>
-你想掌握内容结构？你可以。<br/>
-你想掌握营销？你可以。<br/>
-你想掌握图像提示？你可以。<br/>
-你想掌握钩子？你可以。<br/>
-你想掌握**任何事物**？你可以。<br/>
-<br/>
-如何实现？通过使用人工智能让NotebookLM处理广度，Claude处理深度。<br/>
-<br/>
-是时候用12个步骤创建你自己的专家了。</div>
-            </div>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
-            <p style="color: #999; font-size: 12px; text-align: center;">
-                由 张辽抓取器 自动生成 | 
-                <a href="https://paulwebster068-cyber.github.io/xmd-rss/" style="color: #999;">RSS订阅</a>
-            </p>
-        </div>
-    ]]></content:encoded>
-</item>
-
-<item>
-    <title>用代理管道替代自己：LangChain DeepReach实践</title>
-    <link>https://x.com/LangChain_JS/status/2020980499276235222></link>
-    <guid isPermaLink="false">2026-02-24_用代理管道替代自己：LangChain DeepReach实践</guid>
-    <pubDate>Tue, 24 Feb 2026 19:59:01 +0800</pubDate>
-    <dc:creator>MaahirSachdev0</dc:creator>
-    <author>MaahirSachdev0</author>
-    <description><![CDATA[1. 问题是啥？
-2026年找实习已经悄然变成了第二份工作。CS学生在课程、项目和期中考试之间，还要花费大量时间在寻找公司、研究联系人、撰写个性化邮件等繁琐的行政工作上。这些工作不是编码，不是学习，只是纯粹的物流和行政任务。使用GPT和脚本工具虽然能节省几分钟，但仍然需要手动编排整个流程，学生仍然是"工作流引擎"。
-
-2. 解法是啥？
-作者构建了DeepReach——一个基于LangChain Deep Agents的CLI工具，用"代理管道"替代手动流程。系统分为三个阶段：发现公司→人工审核→并行处理。通过子代理架构实现上下文隔离和并行执行，使用人类介入节点作为安全阀，将文件系统作为持久化存储，最终实现了无需人工编排的自动化求职 outreach 系统。
-
-3. 有啥启发？
-1. 复杂工作流需要明确的阶段划分和依赖管理，单代理循环会导致上下文污染
-2. 并行子代理能显著提升效率，10个公司同时处理比串行快10倍
-3. 人类介入节点是必要的安全阀，避免浪费API费用和时间
-4. 提示词本身可以成为架构规范，描述工作流阶段、检查点和委托规则
-5. 文件系统作为简单基础设施，比数据库更易调试和版本控制]]></description>
-    <content:encoded><![CDATA[
-        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333;">
-            <h1 style="color: #1a73e8; border-bottom: 2px solid #eee; padding-bottom: 10px;">用代理管道替代自己：LangChain DeepReach实践</h1>
-            <p style="color: #666; font-size: 14px;">
-                <strong>作者:</strong> @MaahirSachdev0 | 
-                <strong>日期:</strong> 2026-02-24 | 
-                <a href="https://x.com/LangChain_JS/status/2020980499276235222>" target="_blank" style="color: #ff6600;">阅读原文 →</a>
-            </p>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
-            <h2 style="color: #333; font-size: 18px;">📋 文章摘要</h2>
-            <div style='background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0;'><h4 style='color: #1a73e8; margin: 15px 0 10px 0;'>1. 问题是啥？</h4><p style='margin: 5px 0;'>2026年找实习已经悄然变成了第二份工作。CS学生在课程、项目和期中考试之间，还要花费大量时间在寻找公司、研究联系人、撰写个性化邮件等繁琐的行政工作上。这些工作不是编码，不是学习，只是纯粹的物流和行政任务。使用GPT和脚本工具虽然能节省几分钟，但仍然需要手动编排整个流程，学生仍然是"工作流引擎"。</p><h4 style='color: #1a73e8; margin: 15px 0 10px 0;'>2. 解法是啥？</h4><p style='margin: 5px 0;'>作者构建了DeepReach——一个基于LangChain Deep Agents的CLI工具，用"代理管道"替代手动流程。系统分为三个阶段：发现公司→人工审核→并行处理。通过子代理架构实现上下文隔离和并行执行，使用人类介入节点作为安全阀，将文件系统作为持久化存储，最终实现了无需人工编排的自动化求职 outreach 系统。</p><h4 style='color: #1a73e8; margin: 15px 0 10px 0;'>3. 有啥启发？</h4><p style='margin: 5px 0 5px 20px;'>• 1. 复杂工作流需要明确的阶段划分和依赖管理，单代理循环会导致上下文污染</p><p style='margin: 5px 0 5px 20px;'>• 2. 并行子代理能显著提升效率，10个公司同时处理比串行快10倍</p><p style='margin: 5px 0 5px 20px;'>• 3. 人类介入节点是必要的安全阀，避免浪费API费用和时间</p><p style='margin: 5px 0 5px 20px;'>• 4. 提示词本身可以成为架构规范，描述工作流阶段、检查点和委托规则</p><p style='margin: 5px 0 5px 20px;'>• 5. 文件系统作为简单基础设施，比数据库更易调试和版本控制</p></div>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
-            <h2 style="color: #333; font-size: 18px;">📖 正文</h2>
-            <div style="white-space: pre-wrap; word-wrap: break-word;">
-                <div style='font-size: 16px; line-height: 1.8;'>### 用代理管道替代自己<br/>
-<br/>
-作者：@MaahirSachdev0<br/>
-<br/>
-在2026年，找实习已经悄然变成了第二份工作。<br/>
-<br/>
-在课程、项目和期中考试之间，还有一层没人真正提醒过你的工作。不是编码。不是学习。只是纯粹的物流工作。那些繁重的工作。<br/>
-<br/>
-寻找公司。弄清楚谁在那里工作。追踪邮件地址。研究每个人，让你的消息显得个性化。写一些深思熟虑的内容。重复十次或二十次。<br/>
-<br/>
-这是几个小时的努力，但感觉不像是工程工作。感觉像是行政工作。<br/>
-<br/>
-与此同时，我支付着昂贵的学费学习计算机科学，但大多数晚上我都 buried 在一个有二十个标签页的浏览器里。LinkedIn。公司网站。Hunter。Google。Docs。复制。粘贴。研究。起草。重复。<br/>
-<br/>
-这不难。只是很慢。而且奇怪的是，让人筋疲力尽。<br/>
-<br/>
-所以我做了任何CS学生都会做的事。我尝试自动化它。<br/>
-<br/>
-我用GPT来寻找公司。写小程序来抓取联系人。尝试了像Hunter和Apollo这样的工具。每个工具都能节省几分钟。但它们都没有真正让我脱离这个循环。我仍然需要一步一步地手动编排一切。<br/>
-<br/>
-我仍然是工作流引擎。<br/>
-<br/>
-这就是困扰我的部分。<br/>
-<br/>
-如果这整个东西明显是一个工作流，为什么我是那个执行它的人？<br/>
-<br/>
-在某个时刻，这明显不是一个"更好的提示词"问题。我不需要更智能的文本生成。我需要能够规划步骤、委托任务、并行运行事物，并在我想批准某些事情时暂停的东西。基本上，一个真正的系统。<br/>
-<br/>
-所以我不是写另一个脚本，而是构建了一个代理管道。<br/>
-<br/>
-这个项目变成了DeepReach，一个由LangChain的Deep Agents驱动的CLI工具。<br/>
-<br/>
-### 工作原理<br/>
-<br/>
-在深入了解架构之前，从外部看系统会有所帮助。<br/>
-<br/>
-DeepReach只是一个CLI。没有仪表板。没有浏览器插件。你只需填写一个表单初始化一次，然后运行一个命令：<br/>
-<br/>
-从那里开始，代理接管。一次典型的运行看起来像这样：<br/>
-<br/>
-1. 搜索相关公司<br/>
-2. 暂停并显示列表供你批准<br/>
-3. 并行处理每个批准的公司<br/>
-4. 将所有结果写入磁盘<br/>
-<br/>
-批准步骤是故意的。在代理在研究上花费API积分和查找联系人之前，你有一个检查点来引导它。如果你说"更多早期创业公司"或"更多基础设施导向的"，它会再次搜索。一旦批准，每个公司独立运行。对于每一个，代理：<br/>
-<br/>
-- 研究公司是做什么的<br/>
-- 找到工程联系人<br/>
-- 查找每个人的信息<br/>
-- 起草一封简短的个性化邮件<br/>
-<br/>
-所有内容都保存在一个运行文件夹下。<br/>
-<br/>
-打开drafts.json，你会看到一封完全写好的邮件列表，附带关于每封邮件如何个性化的说明。你可以编辑它们，进行合理性检查，然后在准备好时发送。<br/>
-<br/>
-### 为什么简单的代理不够<br/>
-<br/>
-我的第一反应是用单个循环中的基本工具调用代理来构建这个。对于小型工作流，这工作得很好。但这个管道有一些属性，很快就会打破那些更简单的模式。<br/>
-<br/>
-**1. 有序阶段**<br/>
-<br/>
-有一个严格的依赖图。在找到联系人之前，你不能起草邮件。在选择公司之前，你不能找到联系人。所以工作流自然有阶段：发现→批准→研究→起草。在单代理循环中，所有这些工作都堆积到一个不断增长的上下文窗口中。中间工具输出和研究倾向于泄漏到后续步骤，到第三或第四个公司时，代理开始将上下文混合在一起。隔离很重要。<br/>
-<br/>
-**2. 并行性**<br/>
-<br/>
-然后是并行性问题。顺序处理公司很慢。每一个都需要搜索、API调用和起草。每个公司大约30到40秒。十个公司，你要坐在那里看六分钟的转圈圈。但每个公司都是独立的。没有理由不并发运行它们。单循环强制一切一次发生一个。我真正想要的是十个工作者并行运行。<br/>
-<br/>
-**3. 人类监督**<br/>
-<br/>
-我不想要一个完全自主的黑盒。如果代理选择错误的公司或不相关的领域，我想在它浪费时间和积分之前停止它。基本循环给你全有或全无的执行。没有检查点。我需要能够暂停工作流、审查找到的公司，然后恢复的能力。<br/>
-<br/>
-**4. 持久状态**<br/>
-<br/>
-系统还需要跨运行的记忆。如果我上周给一家公司发了邮件，下次运行不应该再联系他们。即使在工作流退出和完成后，这些信息也必须持久化。无状态循环不能干净地处理这个问题。<br/>
-<br/>
-所以总的来说，我需要一些关键的东西：明确的阶段、公司之间的上下文隔离、并行执行、可恢复的检查点和持久状态。这就是基本代理循环开始崩溃的地方。<br/>
-<br/>
-所以我转向了Deep Agents。<br/>
-<br/>
-### 什么是Deep Agents？<br/>
-<br/>
-如果你还没有听说过，Deep Agents是一个建立在LangGraph之上的独立库。<br/>
-<br/>
-它专为比单个提示循环更大的代理工作流设计。需要规划、工具、状态和委托的那种系统。想想Claude Code或深度研究风格的代理。<br/>
-<br/>
-开箱即用，Deep Agents给你三个原语：<br/>
-<br/>
-- **规划**：内置的write_todos工具，让代理可以将复杂工作分解为明确的步骤<br/>
-- **文件系统**：像read_file、write_file、ls和edit_file这样的工具，由可插拔存储支持<br/>
-- **子代理生成**：task工具，让主代理可以将工作委托给隔离的子代理<br/>
-- **后端层**：代理状态实际存在的地方。可以是本地文件系统（非常适合CLI和大量工件的工作流），或者是沙盒环境，安全地隔离执行代码和工具<br/>
-<br/>
-创建DeepAgent会自动连接所有这些：<br/>
-<br/>
-我的项目主要是这些原语之上的配置：定义工作流，定义一些领域工具，让框架处理机制。让我通过DeepReach实际使用每个这些的真实代码来演示。<br/>
-<br/>
-### 文件系统<br/>
-<br/>
-当你调用createDeepAgent()时，Deep Agents会自动附加FilesystemMiddleware，这会给每个代理开箱即用的read_file、write_file和edit_file。在DeepReach中，这些工具直接指向你的本地磁盘。<br/>
-<br/>
-所以当代理写入文件时，它只是在你机器上写入一个普通文件。没有隐藏状态，没有数据库。<br/>
-<br/>
-工作空间分为两个目录：runs/和storage/。<br/>
-<br/>
-**runs/**：每次执行都有自己的文件夹，包含该运行期间产生的所有内容：公司、联系人、起草的邮件。因为所有内容都保存到磁盘，你可以随时审查、编辑和发送邮件。每次运行都是工作流的干净、可检查的快照。<br/>
-<br/>
-**storage/**是持久的。这在运行之间持久化，并充当记忆。当编排器启动时，它读取storage/contacted.json以避免重复联系相同的公司。当运行完成时，它追加新条目。那个单一文件成为一个简单的去重层——意味着不需要数据库。<br/>
-<br/>
-概念上，这给你一个干净的分离：<br/>
-<br/>
-- 每次运行的工件 → runs/&lt;id/&gt;<br/>
-- 跨运行的知识 → storage/<br/>
-<br/>
-不需要数据库。目录结构本身强制执行边界。这是简单的基础设施，文件易于检查、调试和版本控制。<br/>
-<br/>
-### 核心概念：子代理<br/>
-<br/>
-最大的架构决策是停止考虑一个大代理。<br/>
-<br/>
-不是构建一个单一的、无所不知的循环，附加每个工具，而是将系统拆分为小的、专门的代理，具有狭窄的责任。<br/>
-<br/>
-结构看起来像这样：<br/>
-<br/>
-- **编排器**：协调整个管道的Deep Agent。它搜索网页寻找公司，触发人工审查，然后扇出到公司流子代理。委托通过Deep Agents提供的task工具处理。编排器可以生成一个子代理并说，"处理这个公司"，那个子代理在自己的隔离上下文中运行。<br/>
-- **公司流**：处理一个公司。它快速进行网页搜索了解公司是做什么的，调用people_lookup（Hunter.io）找到工程师，然后为每个人扇出到联系个性化子代理。<br/>
-- **联系个性化**：处理一个人。它搜索网页寻找联系人，从工作空间读取用户的简历，找到共同点，并起草一封个性化邮件。<br/>
-<br/>
-一次运行看起来像这样：<br/>
-- 编排器找到8个公司<br/>
-- 8个公司代理生成<br/>
-- 42个联系代理生成<br/>
-- 42封起草的邮件<br/>
-<br/>
-这可能听起来像是过度设计，但它解决了两个非常实际的问题。<br/>
-<br/>
-**上下文隔离**<br/>
-<br/>
-每个代理只看到与其任务相关的信息。编排器从不看到原始搜索转储或长联系人列表。公司代理从不看到其他公司。联系代理只看到一个人。这在代理之间实现"上下文隔离"，防止交叉污染，保持token使用可预测。<br/>
-<br/>
-**并行性**<br/>
-<br/>
-并行性自然出现，因为独立工作流并发运行。如果十个公司是独立的，就生成十个子代理。没有自定义异步代码。编排器处理委托，每个子代理自己运行，完成后报告回来。这是系统感觉快速的主要原因。<br/>
-<br/>
-### 嵌套Deep Agents<br/>
-<br/>
-Deep Agents保持子代理简单，因为子代理只是另一个代理图。实际上，你用createDeepAgent()创建的任何东西本身都可以作为子代理传入，所以你用其他Deep Agents组成Deep Agents，而不是连接自定义中间件或委托逻辑。这就是我在这里使用的方法：编排器是一个Deep Agent，公司流也是一个完整的Deep Agent，它反过来生成联系个性化代理。每层定义自己的提示词和工具，因为每个Deep Agent已经包含task工具，嵌套委托自动工作。<br/>
-<br/>
-### 人类介入：安全阀<br/>
-<br/>
-完全自主听起来不错，但对于这个工作流来说，这是个坏主意。<br/>
-<br/>
-公司发现是嘈杂的。如果代理选择弱或不相关的公司，你会在每个公司上浪费时间和积分。所以编排器代理在昂贵工作之前暂停，让用户审查公司列表。Deep Agents通过interruptOn支持这一点。<br/>
-<br/>
-当编排器调用review_companies(companies)时：<br/>
-1. 执行暂停<br/>
-2. 状态被检查点<br/>
-3. CLI显示公司列表<br/>
-4. 你批准或给出反馈<br/>
-5. 代理恢复<br/>
-6. 如果被拒绝，编排器再次搜索，找到新公司，再次调用review_companies（创建一个循环直到批准）<br/>
-<br/>
-### 提示词即架构<br/>
-<br/>
-起初让我惊讶的一个设计决策是，多少系统行为存在于提示词中。<br/>
-<br/>
-系统提示词就像架构规范。它们编码阶段、顺序、检查点和委托规则。运行时执行图，但提示词定义必须发生什么以及以什么顺序。不是编写编排代码，我声明式地描述工作流。<br/>
-<br/>
-编排器提示词大致看起来像这样：<br/>
-<br/>
-这里，task是关键原语。它生成一个具有隔离上下文和自己的工具的子代理，独立运行它，然后返回结果给父代理。所以这个提示词作为一个合同：<br/>
-<br/>
-- 阶段定义顺序<br/>
-- 必需工具定义检查点<br/>
-- 多个task()调用定义并行性<br/>
-- 文件写入定义状态<br/>
-<br/>
-没有自定义异步代码或手动扇出。代理发出几个task()调用，运行时并发执行它们。并行性完全由提示词驱动。<br/>
-<br/>
-同样的模式适用于更低层次：<br/>
-- 公司流：研究公司 → 获取联系人 → 生成联系任务<br/>
-- 联系个性化：研究一个人 → 起草一封邮件<br/>
-<br/>
-每个代理都有狭窄的范围和明确的责任。不是一个大的一般用途循环，系统变成了一个小工作者的层次结构。<br/>
-<br/>
-### 技能<br/>
-<br/>
-Deep Agents支持技能，这是可重用的领域专业知识提示词包，存储为SKILL.md文件，代理仅在相关时加载。不是将每个指令塞进系统提示词，技能在需要时按需拉入。这保持token使用更低，行为更集中。<br/>
-<br/>
-我在联系个性化中使用这个，用于反幻觉规则。起草指南存在于cold-email-drafting技能内。这包括代理不能在没有证据的情况下声称什么、允许的源层次结构、安全回退钩子、示例模板。<br/>
-<br/>
-代理只在实际写邮件时加载这个技能，不是在早期研究步骤期间。<br/>
-<br/>
-主要好处是可交换性。我可以为不同的outreach策略定义多个技能。例如，具有更软语言的consultative-outreach技能，或强调共享技术的technical-outreach技能。代理根据用户的语调偏好选择适当的技能。不需要重写提示词。<br/>
-<br/>
-### 更大的图景<br/>
-<br/>
-构建这个之后，主要收获很简单：我不必写太多基础设施。没有自定义调度器。没有作业队列。没有异步编排。没有数据库。没有状态机。<br/>
-<br/>
-并行执行、上下文隔离、文件系统工具、暂停和恢复——都来自Deep Agents。我的工作只是定义工作流阶段、一小套领域工具，以及指定责任的提示词。其他一切都由Deep Agents处理。<br/>
-<br/>
-最终，DeepReach不是真的关于cold outreach或找实习。它只是一个更广泛模式的方便例子。它反映了真实团队如何运作：协调员委托给专家，在需要时进一步分解工作。那个结构干净地映射到代理系统，因为它保持责任狭窄和上下文小。<br/>
-<br/>
-当一个问题看起来像是多步骤工作流，具有独立任务和偶尔的人类检查点时，这种方法自然适合。它 less 关于 crafting 一个更聪明的提示词，more 关于设计一个分布式的、明确的系统，just happens to use language models。</div>
-            </div>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
-            <p style="color: #999; font-size: 12px; text-align: center;">
-                由 张辽抓取器 自动生成 | 
-                <a href="https://paulwebster068-cyber.github.io/xmd-rss/" style="color: #999;">RSS订阅</a>
-            </p>
-        </div>
-    ]]></content:encoded>
-</item>
-
-<item>
-    <title>Polymarket套利Bot的数学原理：Kelly准则</title>
-    <link>https://x.com/RohOnChain/status/2021050990942711849></link>
-    <guid isPermaLink="false">2026-02-24_Polymarket套利Bot的数学原理：Kelly准则</guid>
-    <pubDate>Tue, 24 Feb 2026 19:53:21 +0800</pubDate>
-    <dc:creator>RohOnChain</dc:creator>
-    <author>RohOnChain</author>
-    <description><![CDATA[1. 问题是啥？
-预测市场套利需要精确的数学方法来确定仓位规模。许多交易者在仓位管理上依赖直觉而非数学模型，导致无法最大化收益或面临破产风险。
-
-2. 解法是啥？
-Kelly准则（凯利准则）是区分盈利Polymarket套利Bot（如gabagool22）与普通交易者的核心数学工具。公式为：最优仓位 = (优势 × 获胜概率) / 赔率。具体应用：10%的优势意味着应该下注资本的10%以实现最大化增长；下注2%会放弃80%的期望价值(EV)；下注30%则会导致负期望增长，最终走向破产。
-
-3. 有啥启发？
-1. 仓位规模必须基于数学模型而非直觉
-2. Kelly准则帮助在增长最大化和风险控制之间找到平衡
-3. 过度保守（下注2%）会损失大量期望收益
-4. 过度激进（下注30%）会导致长期负收益和破产]]></description>
-    <content:encoded><![CDATA[
-        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333;">
-            <h1 style="color: #1a73e8; border-bottom: 2px solid #eee; padding-bottom: 10px;">Polymarket套利Bot的数学原理：Kelly准则</h1>
-            <p style="color: #666; font-size: 14px;">
-                <strong>作者:</strong> @RohOnChain | 
-                <strong>日期:</strong> 2026-02-24 | 
-                <a href="https://x.com/RohOnChain/status/2021050990942711849>" target="_blank" style="color: #ff6600;">阅读原文 →</a>
-            </p>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
-            <h2 style="color: #333; font-size: 18px;">📋 文章摘要</h2>
-            <div style='background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0;'><h4 style='color: #1a73e8; margin: 15px 0 10px 0;'>1. 问题是啥？</h4><p style='margin: 5px 0;'>预测市场套利需要精确的数学方法来确定仓位规模。许多交易者在仓位管理上依赖直觉而非数学模型，导致无法最大化收益或面临破产风险。</p><h4 style='color: #1a73e8; margin: 15px 0 10px 0;'>2. 解法是啥？</h4><p style='margin: 5px 0;'>Kelly准则（凯利准则）是区分盈利Polymarket套利Bot（如gabagool22）与普通交易者的核心数学工具。公式为：最优仓位 = (优势 × 获胜概率) / 赔率。具体应用：10%的优势意味着应该下注资本的10%以实现最大化增长；下注2%会放弃80%的期望价值(EV)；下注30%则会导致负期望增长，最终走向破产。</p><h4 style='color: #1a73e8; margin: 15px 0 10px 0;'>3. 有啥启发？</h4><p style='margin: 5px 0 5px 20px;'>• 1. 仓位规模必须基于数学模型而非直觉</p><p style='margin: 5px 0 5px 20px;'>• 2. Kelly准则帮助在增长最大化和风险控制之间找到平衡</p><p style='margin: 5px 0 5px 20px;'>• 3. 过度保守（下注2%）会损失大量期望收益</p><p style='margin: 5px 0 5px 20px;'>• 4. 过度激进（下注30%）会导致长期负收益和破产</p></div>
-            <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
-            <h2 style="color: #333; font-size: 18px;">📖 正文</h2>
-            <div style="white-space: pre-wrap; word-wrap: break-word;">
-                <div style='font-size: 16px; line-height: 1.8;'>这就是将盈利的Polymarket套利Bot（如gabagool22）与普通交易者区分开的确切数学原理。<br/>
-<br/>
-### Kelly准则（凯利准则）<br/>
-<br/>
-**最优仓位 = (优势 × 获胜概率) / 赔率**<br/>
-<br/>
-完整的仓位规模分解如下：<br/>
-<br/>
-| 仓位比例 | 结果分析 |<br/>
-|</div>
             </div>
             <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;"/>
             <p style="color: #999; font-size: 12px; text-align: center;">
